@@ -1,0 +1,190 @@
+.information {
+  background-color: white;
+  font-family: 'Roboto', sans-serif !important;
+  padding-left: 85px;
+  padding-right: 85px;
+  padding-bottom: 35px;
+  ::selection {
+    background-color: #4d4d4d;
+    color: #fff;
+  }
+}
+.information--text {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 35px;
+  justify-content: space-between;
+}
+.information--text h2 {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 54px;
+  width: 45%;
+  line-height: 50px;
+  font-weight: bold;
+}
+.information--text p {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 300;
+}
+.information--products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.information--products div:nth-child(1) {
+  grid-column: 1 / span 2;
+  position: relative;
+  border-radius: 16px;
+  width: 100%;
+  height: 385px;
+  color: white;
+  background-image: url('../../img/second-background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px;
+  transition: all 0.6s;
+  backdrop-filter: blur(5px);
+}
+.information--products div:nth-child(4) {
+  grid-column: 1 / span 2;
+  position: relative;
+  border-radius: 16px;
+  width: 100%;
+  height: 385px;
+  color: white;
+  background-image: url('../../img/testing-lab.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px;
+  transition: all 0.6s;
+  backdrop-filter: blur(5px);
+  margin-bottom: 45px;
+}
+.information--products div:nth-child(1):hover,
+.information--products div:nth-child(4):hover {
+  transition: all 0.6s;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-size: 110%;
+}
+.information--products div:nth-child(1)::before {
+  border-radius: 16px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../img/second-background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  filter: blur(0);
+  transition: all 0.6s;
+  z-index: -1;
+}
+.information--products div:nth-child(4)::before {
+  border-radius: 16px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../img/testing-lab.jpg');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  filter: blur(0);
+  transition: all 0.6s;
+  z-index: -1;
+}
+.information--products div:nth-child(1):hover::before,
+.information--products div:nth-child(4):hover::before {
+  filter: blur(5px);
+  background-size: 110%;
+}
+.information--products div:nth-child(1) h4,
+.information--products div:nth-child(4) h4 {
+  font-weight: 500;
+  font-size: 40px;
+  width: 60%;
+  text-align: center;
+  font-family: 'Roboto', sans-serif !important;
+}
+.information--products div:nth-child(2),
+.information--products div:nth-child(3) {
+  max-height: 385px;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.information--products div:nth-child(2):hover,
+.information--products div:nth-child(3):hover {
+  -webkit-box-shadow: 0px 0px 40px -11px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 40px -11px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 40px -11px rgba(0, 0, 0, 0.75);
+}
+.information--products div:nth-child(2) h5,
+.information--products div:nth-child(3) h5 {
+  font-weight: 600;
+  font-size: 35px;
+  font-family: 'Roboto', sans-serif !important;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 30px;
+}
+.information--products div:nth-child(2) p,
+.information--products div:nth-child(3) p {
+  font-weight: 300;
+  font-size: 20px;
+  color: rgb(167, 167, 167);
+  margin-left: 30px;
+  margin-bottom: 0;
+}
+.information--products div:nth-child(2) span,
+.information--products div:nth-child(3) span {
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 15px;
+  display: block;
+  margin-left: 30px;
+}
+.information--products div:nth-child(2) img,
+.information--products div:nth-child(3) img {
+  width: 75%;
+  object-position: -100px;
+}
+.button-all {
+  margin: 0 auto;
+  display: block;
+  width: 190px;
+  height: 55px;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  transition: 0.3s ease all;
+  font-size: bold;
+  margin-top: 15px;
+  transition: all 0.4s ease;
+}
+.button-all:hover {
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+}
+.collections {
+  margin-bottom: 30px;
+}

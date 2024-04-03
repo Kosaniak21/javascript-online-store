@@ -1,0 +1,67 @@
+@media (min-width: 1640px) {
+  .sale {
+    height: 450px;
+  }
+  .sale img {
+    width: 50%;
+  }
+}
+@media (max-width: 1275px) {
+  .sale {
+    height: 420px;
+  }
+  .sale--wrapper h2 {
+    font-size: clamp(30px, 4vw, 70px);
+  }
+}
+@media (max-width: 1070px) {
+  .sale {
+    height: 360px;
+  }
+  .sale--wrapper {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media (max-width: 820px) {
+  .sale {
+    height: 300px;
+  }
+  .sale--wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .sale--wrapper button {
+    height: 62px;
+    width: 210px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 640px) {
+  .sale {
+    height: 250px;
+  }
+  .sale--wrapper {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .sale--wrapper button {
+    height: 50px;
+    width: 175px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 521px) {
+  .sale--wrapper h2 {
+    font-size: clamp(19px, 5vw, 25px);
+    width: 100%;
+  }
+  .sale--wrapper button {
+    height: 40px;
+    width: 145px;
+    font-size: 15px;
+  }
+  .sale {
+    height: 235px;
+  }
+}

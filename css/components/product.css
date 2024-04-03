@@ -1,0 +1,103 @@
+.product {
+  border: none;
+  border-radius: 20px;
+  position: relative;
+}
+.card-img-wrapper {
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.card-img-top {
+  min-width: 100%;
+  object-fit: cover;
+  max-height: 420px;
+}
+.card-title {
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.card-text {
+  font-size: 25px;
+  margin: 0;
+  font-weight: 500;
+}
+.color-buttons {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+input[type='radio'] {
+  display: none;
+}
+input[type='radio']:checked + label {
+  border: 5px solid rgba(77, 77, 255, 0.8);
+  width: 32px;
+  height: 32px;
+}
+input[type='radio']:checked + label span {
+  transform: scale(1.2);
+}
+label {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    span {
+      transform: scale(1.2);
+    }
+  }
+  span {
+    display: block;
+    width: 100%;
+    border-radius: 50%;
+    height: 100%;
+    transition: all 0.2s ease-in-out;
+  }
+}
+.card-like-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  border-radius: 15px;
+}
+.card-like-button button {
+  background-color: rgb(255, 255, 255);
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+}
+.card-like-button:hover .fa-heart.fa-regular {
+  color: #d23027;
+}
+.fa-heart.fa-regular {
+  color: black;
+  transition: all 0.3s ease;
+  font-size: 25px;
+}
+.fa-heart.fa-solid {
+  font-size: 25px;
+  transition: all 0.3s ease;
+  color: #d23027;
+  border-color: #d23027;
+}
+.swiper {
+  width: 100%;
+  height: 70px;
+}
+.swiper-slide {
+  width: fit-content !important;
+}

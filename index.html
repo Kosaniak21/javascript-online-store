@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/x-icon" href="img/logo.png" />
+    <title>Online Shop MorbRide</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/components/header.css" />
+    <link rel="stylesheet" href="css/components/first-page.css" />
+    <link rel="stylesheet" href="css/components/products.css" />
+    <link rel="stylesheet" href="css/components/product.css" />
+    <link rel="stylesheet" href="css/components/information.css" />
+    <link rel="stylesheet" href="css/components/offline-store.css" />
+    <link rel="stylesheet" href="css/components/sale.css" />
+    <link rel="stylesheet" href="css/components/running-line.css" />
+    <link rel="stylesheet" href="css/components/footer.css" />
+    <link rel="stylesheet" href="css/media-queries/media-queries-products.css" />
+    <link rel="stylesheet" href="css/media-queries/media-queries-information.css" />
+    <link rel="stylesheet" href="css/media-queries/media-queries-offline-store.css" />
+    <link rel="stylesheet" href="css/media-queries/media-queries-sale.css" />
+    <link rel="stylesheet" href="css/media-queries/media-queries-running-line.css" />
+    <link rel="stylesheet" href="css/media-queries/media-queries-footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anta&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  </head>
+
+  <body>
+    <header class="container-fluid custom-container" id="home">
+      <section class="discount-info">
+        <div class="number">
+          <a href="tel:+0012456789"
+            ><i class="fa-sharp fa-solid fa-phone-volume" style="color: #ffffff; font-size: 20px; margin-right: 5px"></i
+            >+00124567890</a
+          >
+        </div>
+        <div class="discount">
+          <p>Get 50% Off Selected Items</p>
+          <a href="#products">Shop now</a>
+        </div>
+        <div class="language">
+          <select class="language-picker">
+            <option
+              value="uk"
+              class="test"
+              data-thumbnail="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/United-kingdom_flag_icon_round.svg/1024px-United-kingdom_flag_icon_round.svg.png"
+            >
+              English
+            </option>
+            <option value="en" data-thumbnail="https://cdn-icons-png.flaticon.com/512/197/197572.png"> Ukrainian </option>
+          </select>
+
+          <div class="language-select">
+            <button class="btn-select" value=""></button>
+          </div>
+          <div class="dropdown-list">
+            <ul class="language-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <nav class="navbar navbar-expand-lg fixed-navbar">
+        <div class="container-fluid">
+          <div class="logo navbar-brand">
+            <img src="img/logo.png" alt="logo" />
+            <a class="navbar-brand" href="#">MORDRIDE</a>
+          </div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <div class="hamburger">
+              <input type="checkbox" class="check_hamburger" />
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+
+          <div class="collapse navbar-collapse nav-links" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#products">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacts">Contacts</a>
+              </li>
+            </ul>
+            <div>
+              <form class="search">
+                <input type="search" placeholder="Search product..." />
+                <button>
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
+              <div class="modals">
+                <a class="nav-link openCartLink" href="#modal-likes" data-toggle="modal">
+                  <i class="fa-regular fa-heart icon-heart"></i>
+                  <span id="likes-badge" class="badge badge-light"></span>
+                </a>
+                <a class="nav-link openCartLink cart-link" href="#modal-cart" data-toggle="modal" data-target="#modal-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span id="cart-badge" class="badge"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container-fluid custom-container">
+      <section class="firstview">
+        <span>LIMITED EDITION</span>
+        <h1>There's not Light Bicycle<br />there's Bicycle A5 Black</h1>
+        <p>
+          Get your unique bicycle style with our various collections.<br />Our A5 Black are available while stock lasts.
+        </p>
+        <div class="firstviews_buttons"> <button>Buy now A5 black</button><button>View collection</button> </div>
+        <img src="img/firstview.png" alt="firstview" />
+      </section>
+      <section class="products" id="products">
+        <div class="products-filters">
+          <button class="products-filters-button active" type="button" data-filter="all">All</button>
+          <button class="products-filters-button" type="button" data-filter="urban-bike">Urban Bike</button>
+          <button class="products-filters-button" type="button" data-filter="accessories">Accessories</button>
+          <button class="products-filters-button" type="button" data-filter="mountain-bike">Mountain Bike</button>
+          <button class="products-filters-button" type="button" data-filter="road-bike">Road Bike</button>
+          <button class="products-filters-button" type="button" data-filter="e-series-bike">E-Series Bike</button>
+          <button class="products-filters-button" type="button" data-filter="parts">Parts</button>
+        </div>
+        <div class="swiper mySwiper products-filters-slaider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"
+              ><button class="products-filters-button active" type="button" data-filter="all">All</button></div
+            >
+            <div class="swiper-slide"
+              ><button class="products-filters-button" type="button" data-filter="urban-bike">Urban Bike</button></div
+            >
+            <div class="swiper-slide"
+              ><button class="products-filters-button" type="button" data-filter="accessories">Accessories</button></div
+            >
+            <div class="swiper-slide"
+              ><button class="products-filters-button" type="button" data-filter="mountain-bike">Mountain Bike</button></div
+            >
+            <div class="swiper-slide"
+              ><button class="products-filters-button" type="button" data-filter="road-bike">Road Bike</button></div
+            >
+            <div class="swiper-slide"
+              ><button class="products-filters-button" type="button" data-filter="e-series-bike">E-Series Bike</button></div
+            >
+            <div class="swiper-slide"
+              ><button class="products-filters-button" type="button" data-filter="parts">Parts</button></div
+            >
+          </div>
+        </div>
+        <div class="row products-container"> </div>
+        <button class="button-all">View all products</button>
+      </section>
+      <section class="information">
+        <div class="information--text">
+          <h2>Eveluate your bike with out bike collection</h2>
+          <p> Discovers the latest collection of bike and enhance your style with unique and fantstic collection </p>
+        </div>
+        <div class="information--products">
+          <div>
+            <span>Epsilone T6</span>
+            <h4>Whether it's climbing and going down steep trails or jumping high at bike parks</h4>
+          </div>
+          <div>
+            <span>The VanMoof S5</span>
+            <h5>Our remastered frame</h5>
+            <p>For riders 5`4" - 5'9"</p>
+            <img src="img/products/VanMoof.png" alt="the-vanmoof-s5" />
+          </div>
+          <div>
+            <span>Gianicolo</span>
+            <h5>Our lower step-in frame</h5>
+            <p>For riders 5`1" - 6'5"</p>
+            <img src="img/products/gianicolo.png" alt="gianicolo" />
+          </div>
+          <div>
+            <span>The testing lab</span>
+            <h4>Discover a behind-the-scenes look at our new testing process</h4>
+          </div>
+        </div>
+        <button class="button-all collections">Viem all colections</button>
+      </section>
+      <section class="offline-store">
+        <div class="offline-store--title">
+          <div>
+            <img src="img/logo.png" alt="logo" />
+          </div>
+          <h2>Our offline store</h2>
+          <p>
+            Our offline store of Morbribe,so you can check the offline store at this below and don't forget to your money
+            xixi :)
+          </p>
+        </div>
+        <div class="offline-store--wrapper">
+          <div>
+            <address>
+              <h5>Morbide Store -- 1901 Thornribge Cir.Shiloh,Hawaii 81063</h5>
+              <p>
+                Discover quality and convenience at Monride Store in scenic Shiloh, Hawaii. With a curated selection and
+                genuine hospitality, we're your destination for essentials and more in the heart of paradise.
+              </p>
+            </address>
+          </div>
+          <div>
+            <address>
+              <h5>Morbide Store -- 2464 Royal Ln.Mesa,New Jersey 45463</h5>
+              <p>
+                Experience convenience and exceptional quality at Monride Store in Mesa, New Jersey. Explore our curated
+                selection and enjoy genuine hospitality, making us your ultimate go-to destination for essentials and more.
+              </p>
+            </address>
+          </div>
+        </div>
+      </section>
+      <section class="sale">
+        <div class="sale--wrapper">
+          <h2>Grab exchiting deals and speacial promos today,Don't miss out!</h2>
+          <button>Grab now S12 Blue</button>
+        </div>
+        <img src="img/s14-blue.png" alt="bicycle-s14-blue" />
+      </section>
+      <section class="running-line">
+        <div class="header ticker-wrapper">
+          <div class="ticker-wrapper__first-half">
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE MOUNTAIN</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE GRAVEL</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE DJ/BMX</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE FOLDING</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE TOURING</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE ACCESSORIES</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE CITY</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE JUNIOR</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE E-SERIAs</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE DJ/BMX</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE HELMETs</p>
+          </div>
+          <div class="ticker-wrapper__second-half">
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE DJ/BMX</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE HELMETs</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE E-SERIAs</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE JUNIOR</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE CITY</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE ACCESSORIES</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE TOURING</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE FOLDING</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE DJ/BMX</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE GRAVEL</p>
+            <img src="img/logo.png" alt="logo" />
+            <p>BIKE MOUNTAIN</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container-fluid custom-container">
+      <div class="footer-logo">
+        <img src="img/logo.png" alt="logo" />
+        <a class="navbar-brand" href="#">MORDRIDE</a>
+      </div>
+      <section class="footer-contact">
+        <div>
+          <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
+        </div>
+        <div>
+          <span>OPEN 13:00 PM - 20:00 PM</span>
+        </div>
+        <div class="footer-contact-contacts">
+          <a href="tel:380976893264"
+            >+001234567890 <?xml version="1.0" ?><svg
+              height="48"
+              viewBox="0 0 48 48"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0 0h48v48h-48z" fill="none" />
+              <path
+                d="M13.25 21.59c2.88 5.66 7.51 10.29 13.18 13.17l4.4-4.41c.55-.55 1.34-.71 2.03-.49 2.24.74 4.65 1.14 7.14 1.14 1.11 0 2 .89 2 2v7c0 1.11-.89 2-2 2-18.78 0-34-15.22-34-34 0-1.11.9-2 2-2h7c1.11 0 2 .89 2 2 0 2.49.4 4.9 1.14 7.14.22.69.06 1.48-.49 2.03l-4.4 4.42z"
+              /></svg
+          ></a>
+          <a href="mailto:kosvik264@gmail.com"
+            >SUPPORT@MONRIDE.CO <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <title />
+              <g data-name="mail email e-mail letter" id="mail_email_e-mail_letter">
+                <path
+                  d="M28,13a1,1,0,0,0-1,1v8a1,1,0,0,1-1,1H6a1,1,0,0,1-1-1V14a1,1,0,0,0-2,0v8a3,3,0,0,0,.88,2.12A3,3,0,0,0,6,25H26a3,3,0,0,0,2.12-.88A3,3,0,0,0,29,22V14A1,1,0,0,0,28,13Z"
+                />
+                <path
+                  d="M15.4,18.8a1,1,0,0,0,1.2,0L28.41,9.94a1,1,0,0,0,.3-1.23,3.06,3.06,0,0,0-.59-.83A3,3,0,0,0,26,7H6a3,3,0,0,0-2.12.88,3.06,3.06,0,0,0-.59.83,1,1,0,0,0,.3,1.23ZM6,9H26a.9.9,0,0,1,.28,0L16,16.75,5.72,9A.9.9,0,0,1,6,9Z"
+                />
+              </g></svg
+          ></a>
+        </div>
+      </section>
+      <section class="footer-top">
+        <div class="footer-top-links" id="contacts">
+          <div class="footer-top-menu">
+            <div class="footer-top-title">
+              <span></span>
+              <span>MENU</span>
+            </div>
+            <div>
+              <a href=""
+                >DELIVERY <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #231f20;
+                      }
+                    </style>
+                  </defs>
+                  <title />
+                  <g id="Next">
+                    <path
+                      class="cls-1"
+                      d="M25.2041,16l-6.37,9.5547A1,1,0,0,1,17.17,24.4453L22.1328,17H7.998a1,1,0,0,1,0-2H22.1328L17.17,7.5547A1,1,0,0,1,18.834,6.4453Z"
+                    />
+                  </g></svg
+              ></a>
+              <a href=""
+                >CONTACT <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #231f20;
+                      }
+                    </style>
+                  </defs>
+                  <title />
+                  <g id="Next">
+                    <path
+                      class="cls-1"
+                      d="M25.2041,16l-6.37,9.5547A1,1,0,0,1,17.17,24.4453L22.1328,17H7.998a1,1,0,0,1,0-2H22.1328L17.17,7.5547A1,1,0,0,1,18.834,6.4453Z"
+                    />
+                  </g></svg
+              ></a>
+              <a href=""
+                >DEALS <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #231f20;
+                      }
+                    </style>
+                  </defs>
+                  <title />
+                  <g id="Next">
+                    <path
+                      class="cls-1"
+                      d="M25.2041,16l-6.37,9.5547A1,1,0,0,1,17.17,24.4453L22.1328,17H7.998a1,1,0,0,1,0-2H22.1328L17.17,7.5547A1,1,0,0,1,18.834,6.4453Z"
+                    />
+                  </g></svg
+              ></a>
+              <a href=""
+                >ABOUT <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #231f20;
+                      }
+                    </style>
+                  </defs>
+                  <title />
+                  <g id="Next">
+                    <path
+                      class="cls-1"
+                      d="M25.2041,16l-6.37,9.5547A1,1,0,0,1,17.17,24.4453L22.1328,17H7.998a1,1,0,0,1,0-2H22.1328L17.17,7.5547A1,1,0,0,1,18.834,6.4453Z"
+                    />
+                  </g></svg
+              ></a>
+              <a href="" class="footer-top-last-link"
+                >LIMITED EDITION BIKE!!! <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #231f20;
+                      }
+                    </style>
+                  </defs>
+                  <title />
+                  <g id="Next">
+                    <path
+                      class="cls-1"
+                      d="M25.2041,16l-6.37,9.5547A1,1,0,0,1,17.17,24.4453L22.1328,17H7.998a1,1,0,0,1,0-2H22.1328L17.17,7.5547A1,1,0,0,1,18.834,6.4453Z"
+                    />
+                  </g></svg
+              ></a>
+            </div>
+          </div>
+          <div class="footer-top-products">
+            <div class="footer-top-title">
+              <span></span>
+              <span>PRODUCT</span>
+            </div>
+            <div>
+              <a href=""
+                >E-SERIES <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #231f20;
+                      }
+                    </style>
+                  </defs>
+                  <title />
+                  <g id="Next">
+                    <path
+                      class="cls-1"
+                      d="M25.2041,16l-6.37,9.5547A1,1,0,0,1,17.17,24.4453L22.1328,17H7.998a1,1,0,0,1,0-2H22.1328L17.17,7.5547A1,1,0,0,1,18.834,6.4453Z"
+                    />
+                  </g></svg
+              ></a>
+              <a href=""
+                >MOUNTAIN <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #231f20;
+                      }
+                    </style>
+                  </defs>
+                  <title />
+                  <g id="Next">
+                    <path
+                      class="cls-1"
+                      d="M25.2041,16l-6.37,9.5547A1,1,0,0,1,17.17,24.4453L22.1328,17H7.998a1,1,0,0,1,0-2H22.1328L17.17,7.5547A1,1,0,0,1,18.834,6.4453Z"
+                    />
+                  </g></svg
+              ></a>
+              <a href=""
+                >URBAN <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #231f20;
+                      }
+                    </style>
+                  </defs>
+                  <title />
+                  <g id="Next">
+                    <path
+                      class="cls-1"
+                      d="M25.2041,16l-6.37,9.5547A1,1,0,0,1,17.17,24.4453L22.1328,17H7.998a1,1,0,0,1,0-2H22.1328L17.17,7.5547A1,1,0,0,1,18.834,6.4453Z"
+                    />
+                  </g></svg
+              ></a>
+              <a href=""
+                >ROAD <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #231f20;
+                      }
+                    </style>
+                  </defs>
+                  <title />
+                  <g id="Next">
+                    <path
+                      class="cls-1"
+                      d="M25.2041,16l-6.37,9.5547A1,1,0,0,1,17.17,24.4453L22.1328,17H7.998a1,1,0,0,1,0-2H22.1328L17.17,7.5547A1,1,0,0,1,18.834,6.4453Z"
+                    />
+                  </g></svg
+              ></a>
+              <a href="" class="footer-top-last-link"
+                >KIDS <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #231f20;
+                      }
+                    </style>
+                  </defs>
+                  <title />
+                  <g id="Next">
+                    <path
+                      class="cls-1"
+                      d="M25.2041,16l-6.37,9.5547A1,1,0,0,1,17.17,24.4453L22.1328,17H7.998a1,1,0,0,1,0-2H22.1328L17.17,7.5547A1,1,0,0,1,18.834,6.4453Z"
+                    />
+                  </g></svg
+              ></a>
+            </div>
+          </div>
+          <div class="footer-top-newsletter">
+            <div class="footer-top-title">
+              <span></span>
+              <span>NEWSLETTER</span>
+            </div>
+
+            <div class="input-container">
+              <input type="text" placeholder="EMAIL" />
+              <button>
+                SUBSCRIBE <?xml version="1.0" ?><svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                  <rect fill="none" height="256" width="256" />
+                  <path
+                    d="M37.4,47.6,96,216.9c2.5,7.3,12.9,7.1,15.2-.3L134.8,140a7.5,7.5,0,0,1,5.3-5.2l76.5-23.6c7.4-2.3,7.6-12.7.3-15.2L47.6,37.4A8,8,0,0,0,37.4,47.6Z"
+                    fill="#fefefe"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <p>
+              Join our newsletter for know about discount, new bikes and many more news. Is free for you, Don't worry sir!
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="footer-bottom">
+        <div class="copyright">
+          © Copyright 2024,
+          <a href="https://dribbble.com/shots/21485657-Mornride-Bike-Marketplace-Landingpage">Designbyrefly</a>
+        </div>
+
+        <div class="footer-bottom-links">
+          <a href="" class="footer-bottom-link">Term of privacy</a>
+          <a href="" class="footer-bottom-link">Policy services</a>
+          <a href="" class="footer-bottom-link">Cookies settings</a>
+          <a href="" class="footer-bottom-link">Legal information</a>
+        </div>
+        <div class="footer-bottom-social">
+          <a href="">
+            <?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+            <svg
+              enable-background="new 0 0 56.693 56.693"
+              height="56.693px"
+              id="Layer_1"
+              version="1.1"
+              viewBox="0 0 56.693 56.693"
+              width="56.693px"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <path
+                d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"
+              />
+            </svg> </a
+          ><a href="">
+            <?xml version="1.0" encoding="utf-8"?>
+            <svg
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 56.7 56.7"
+              enable-background="new 0 0 56.7 56.7"
+              xml:space="preserve"
+            >
+              <g>
+                <path
+                  d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
+		c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"
+                />
+                <circle cx="41.5" cy="16.4" r="2.9" />
+                <path
+                  d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
+		h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3
+		s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
+		c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z"
+                />
+              </g>
+            </svg> </a
+          ><a href="">
+            <?xml version="1.0" ?><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1200"
+              height="1227"
+              viewBox="0 0 1200 1227"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_1_2)">
+                <path
+                  d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_2"><rect width="1200" height="1227" /></clipPath>
+              </defs>
+            </svg> </a
+          ><a href="https://www.linkedin.com/in/viktorkosaniak/" target="_blank"
+            ><?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.0//EN' 'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+            <svg
+              enable-background="new 0 0 32 32"
+              height="32px"
+              id="Layer_1"
+              version="1.0"
+              viewBox="0 0 32 32"
+              width="32px"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <g>
+                <rect height="23" width="7" y="9" />
+                <path
+                  d="M24.003,9C20,9,18.89,10.312,18,12V9h-7v23h7V19c0-2,0-4,3.5-4s3.5,2,3.5,4v13h7V19C32,13,31,9,24.003,9z"
+                />
+                <circle cx="3.5" cy="3.5" r="3.5" />
+              </g>
+              <g />
+              <g />
+              <g />
+              <g />
+              <g />
+              <g /></svg></a
+          ><a href=""
+            ><?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+            <svg
+              height="100%"
+              style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2"
+              version="1.1"
+              viewBox="0 0 512 512"
+              width="100%"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:serif="http://www.serif.com/"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <path
+                d="M501.303,132.765c-5.887,-22.03 -23.235,-39.377 -45.265,-45.265c-39.932,-10.7 -200.038,-10.7 -200.038,-10.7c0,0 -160.107,0 -200.039,10.7c-22.026,5.888 -39.377,23.235 -45.264,45.265c-10.697,39.928 -10.697,123.238 -10.697,123.238c0,0 0,83.308 10.697,123.232c5.887,22.03 23.238,39.382 45.264,45.269c39.932,10.696 200.039,10.696 200.039,10.696c0,0 160.106,0 200.038,-10.696c22.03,-5.887 39.378,-23.239 45.265,-45.269c10.696,-39.924 10.696,-123.232 10.696,-123.232c0,0 0,-83.31 -10.696,-123.238Zm-296.506,200.039l0,-153.603l133.019,76.802l-133.019,76.801Z"
+                style="fill-rule: nonzero"
+              /></svg
+          ></a>
+        </div>
+      </section>
+    </footer>
+
+    <!-- Modal Product Info -->
+    <div
+      class="modal fade"
+      id="productInfoModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="productInfoLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productInfoLabel">Product Info</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img class="card-img-top" src="" alt="" />
+            <h4 class="card-title"></h4>
+            <p class="card-text"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-close" data-dismiss="modal"> Close </button>
+            <button class="btn btn-primary buy" data-id="id">Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Cart -->
+    <div class="modal fade" id="modal-cart" tabindex="-1" role="dialog" aria-labelledby="cartLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cartLabel">Cart</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="cart-product-list-container"></div>
+            <hr />
+            <div class="container">
+              <form class="form-contacts">
+                <div class="form-group row">
+                  <label for="client-name" class="col-4 col-form-label">Your name:</label>
+                  <input class="form-control col-8" type="text" id="client-name" required />
+                </div>
+                <div class="form-group row">
+                  <label for="client-email" class="col-4 col-form-label">Your email:</label>
+                  <input class="form-control col-8" type="email" id="client-email" required />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-close" data-dismiss="modal"> Close </button>
+            <button class="btn btn-primary order">Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal likes -->
+    <div class="modal fade" id="modal-likes" tabindex="-1" role="dialog" aria-labelledby="cartLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cartLabel">Cart</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="cart-product-list-container"></div>
+            <hr />
+            <div class="container">
+              <form class="form-contacts">
+                <div class="form-group row">
+                  <label for="client-name" class="col-4 col-form-label">Your name:</label>
+                  <input class="form-control col-8" type="text" id="client-name" required />
+                </div>
+                <div class="form-group row">
+                  <label for="client-email" class="col-4 col-form-label">Your email:</label>
+                  <input class="form-control col-8" type="email" id="client-email" required />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-close" data-dismiss="modal"> Close </button>
+            <button class="btn btn-primary order">Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/6d5f36987c.js" crossorigin="anonymous"></script>
+    <script async src="js/alert-window.js"></script>
+    <script defer src="js/products-service.js"></script>
+    <script defer src="js/cart.js"></script>
+    <script defer src="js/product-list.js"></script>
+    <script defer src="js/swiper.js" type="module"></script>
+    <script defer src="js/header-scroll.js"></script>
+    <script defer src="js/index.js"></script>
+    <!-- <script defer src="js/custom-select.js"></script> -->
+  </body>
+</html>

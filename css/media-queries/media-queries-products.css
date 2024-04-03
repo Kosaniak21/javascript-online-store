@@ -1,0 +1,28 @@
+@media (max-width: 1115px) {
+  .products-filters {
+    display: none;
+  }
+  .products-filters-slaider {
+    display: block !important;
+  }
+}
+@media (max-width: 1070px) {
+  .products {
+    padding-top: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media (max-width: 820px) {
+  .products {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 640px) {
+  .products {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}

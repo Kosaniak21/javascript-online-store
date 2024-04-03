@@ -1,0 +1,78 @@
+.firstview {
+  background-color: black;
+  height: 700px;
+  width: 100%;
+  color: white;
+  padding-left: 85px;
+  padding-top: 120px;
+  ::selection {
+    background-color: #cccccc;
+    color: #fff;
+  }
+}
+.firstviews_buttons button {
+  width: 190px;
+  height: 60px;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 45px;
+  font-size: 18px;
+  font-weight: 600;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  transition: all 0.35s ease;
+}
+.firstviews_buttons button:hover {
+  background-color: #fff;
+  color: black;
+  border: none;
+}
+.firstviews_buttons button:nth-child(2) {
+  margin-left: 23px;
+}
+.firstview span {
+  font-size: 17px;
+  font-weight: 100;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  padding: 14px 23px;
+  background: rgb(41, 41, 41);
+  background: linear-gradient(153deg, rgba(41, 41, 41, 1) 23%, rgba(0, 0, 0, 1) 100%);
+  font-weight: 500;
+}
+.firstview h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 61px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.firstview p {
+  font-weight: 100;
+  font-size: 20px;
+}
+.firstview img {
+  position: absolute;
+  right: 0px;
+  top: 25%;
+  width: 63%;
+}
+.firstview :not(img) {
+  z-index: 2;
+}
+.products-container {
+  margin: 0;
+}
+/* .grid-photo {
+   padding-left: 85px;
+   padding-right: 85px;
+   background-color: #222222;
+ }
+ .grid-photo p {
+   color: #fff;
+   background-color: #222222;
+   padding: 20px 15px 50px 20px;
+   font-size: 29px;
+   width: 380px;
+   line-height: 29px;
+ } */

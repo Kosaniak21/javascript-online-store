@@ -1,0 +1,88 @@
+.offline-store {
+  position: relative;
+  height: 600px;
+  background-color: black;
+  ::selection {
+    background-color: #cccccc;
+    color: #fff;
+  }
+}
+.offline-store--wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.offline-store--wrapper div:nth-child(1) {
+  width: 50%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 10%, rgba(255, 255, 255, 0) 100%), url('../../img/shop3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.3s ease;
+  padding-left: 85px;
+  padding-right: 34px;
+}
+.offline-store--wrapper div:nth-child(2) {
+  width: 50%;
+  padding-right: 85px;
+  padding-left: 34px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 10%, rgba(255, 255, 255, 0) 100%), url('../../img/shop4.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.3s ease;
+}
+.offline-store--background {
+  background: rgb(31, 31, 31);
+  background: linear-gradient(0deg, rgba(31, 31, 31, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.offline-store--title {
+  position: absolute;
+  width: 40%;
+  color: #fefefe;
+  top: 10%;
+  left: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.offline-store--title h2 {
+  font-size: 38px;
+  margin-top: 20px;
+  font-family: 'Roboto', sans-serif !important;
+}
+.offline-store--title p {
+  font-weight: 300;
+  font-size: 20px;
+}
+.offline-store--title div {
+  background-color: #242424;
+  border-radius: 50%;
+  width: 68px;
+  height: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.offline-store--title img {
+  width: 38px;
+  height: 38px;
+}
+.offline-store--wrapper div {
+  display: flex;
+}
+.offline-store--wrapper div address {
+  align-self: end;
+  height: 35%;
+  color: #fefefe;
+  font-size: 15px;
+  font-weight: 300;
+}
+.offline-store--wrapper h5 {
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 400;
+  font-size: 26px;
+}

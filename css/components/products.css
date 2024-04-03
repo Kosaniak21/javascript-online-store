@@ -1,0 +1,41 @@
+.products {
+  padding: 60px 85px 115px 85px;
+  background-color: #fff;
+  ::selection {
+    background-color: #4d4d4d;
+    color: #fff;
+  }
+}
+.products-filters-slaider {
+  display: none !important;
+}
+.products-filters {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+.products-filters-button {
+  text-decoration: none;
+  color: black;
+  background-color: #f5f5f5;
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+.products-filters-button:hover,
+.products-filters-active-link {
+  background-color: black;
+  color: #fff;
+}
+.all-products:hover {
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+}
+.products-filters-button.active {
+  background-color: black;
+  color: #fff;
+}

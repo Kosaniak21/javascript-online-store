@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  scroll-behavior: smooth;
+}
+body {
+  max-width: 100%;
+  font-family: 'Roboto', sans-serif !important;
+  scrollbar-gutter: stable;
+  background-color: black;
+}
+/* main {
+  margin-top: 135px;
+} */
+/* #carouselOffers {
+  min-height: 500px;
+}
+#carouselOffers img {
+  max-height: 450px;
+} */

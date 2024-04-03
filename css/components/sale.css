@@ -1,0 +1,48 @@
+.sale {
+  height: 527px;
+  background-color: black;
+  position: relative;
+  ::selection {
+    background-color: #cccccc;
+    color: #fff;
+  }
+}
+.sale img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  z-index: 2;
+}
+.sale--wrapper {
+  z-index: 1;
+  padding-left: 85px;
+  padding-right: 85px;
+  padding-top: 45px;
+}
+.sale--wrapper h2 {
+  background: linear-gradient(to right, #ffffff 0%, #d2d2d2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-family: 'Roboto', sans-serif;
+  width: 60%;
+  font-size: 70px;
+}
+.sale--wrapper button {
+  height: 70px;
+  width: 260px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 17px;
+}
+.sale--wrapper button:hover {
+  background-color: transparent;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  transition: all 0.4s ease;
+}

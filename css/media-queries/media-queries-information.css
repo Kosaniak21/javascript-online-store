@@ -1,0 +1,78 @@
+@media (min-width: 1670px) {
+  .information--products div:nth-child(1) h4,
+  .information--products div:nth-child(4) h4 {
+    font-size: 54px;
+  }
+  .information--products div:nth-child(1) span,
+  .information--products div:nth-child(4) span {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1070px) {
+  .information {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .information--products div:nth-child(1),
+  .information--products div:nth-child(4) {
+    max-height: 290px;
+  }
+  .information--text h2 {
+    font-size: clamp(30px, 4vw, 70px);
+  }
+}
+@media (max-width: 820px) {
+  .information {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .information--products div:nth-child(1),
+  .information--products div:nth-child(4) {
+    max-height: 250px;
+  }
+  .information--products div:nth-child(1) h4,
+  .information--products div:nth-child(4) h4 {
+    font-size: 30px;
+  }
+  .information--text h2 {
+    line-height: 37px;
+  }
+  .information--text p {
+    font-size: 20px;
+  }
+  .collections {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 640px) {
+  .information {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .information--products {
+    display: flex;
+    flex-direction: column;
+    column-gap: 0px;
+    row-gap: 12px;
+  }
+  .information--products div:nth-child(1) h4,
+  .information--products div:nth-child(4) h4 {
+    font-size: 25px;
+  }
+  .information--text h2 {
+    line-height: 30px;
+    font-size: 30px;
+    width: 100%;
+  }
+  .information--text p {
+    font-size: 18px;
+    width: 100%;
+  }
+  .information--text {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .collections {
+    margin-bottom: 10px;
+  }
+}

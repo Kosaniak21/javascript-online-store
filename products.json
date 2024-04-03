@@ -1,0 +1,174 @@
+[
+  {
+    "id": "1",
+    "title": "Mottera",
+    "image": {
+      "1": {
+        "link": "mottera.png",
+        "color": "#3CBF8D"
+      },
+      "2": {
+        "link": "mottera-blue.png",
+        "color": "#00239E"
+      }
+    },
+    "price": 2120.49,
+    "category": "urban-bike"
+  },
+  {
+    "id": "2",
+    "title": "Diamant",
+    "image": {
+      "1": {
+        "link": "diamant.png",
+        "color": "#6BC6E0"
+      },
+      "2": {
+        "link": "diamant-blue.png",
+        "color": "black"
+      }
+    },
+    "price": 4415.15,
+    "category": "mountain-bike"
+  },
+  {
+    "id": "3",
+    "title": "Rise H20",
+    "image": {
+      "1": {
+        "link": "rise-h20-blue.png",
+        "color": "#A3CEF1"
+      },
+      "2": {
+        "link": "rise-h20-orange.png",
+        "color": "#FFA600"
+      }
+    },
+    "price": 2255.99,
+    "category": "urban-bike"
+  },
+  {
+    "id": "4",
+    "title": "Gallio",
+    "image": {
+      "1": {
+        "link": "bicycle-small-red.png",
+        "color": "#FF0000"
+      },
+      "2": {
+        "link": "bicycle-small-yellow.png",
+        "color": "#FFFF00"
+      }
+    },
+    "price": 2485.55,
+    "category": "urban-bike"
+  },
+  {
+    "id": "5",
+    "title": "Tuskar",
+    "image": {
+      "1": {
+        "link": "tuskar-blue.png",
+        "color": "#69C2EF"
+      },
+      "2": {
+        "link": "tuskar-black.png",
+        "color": "black"
+      }
+    },
+    "price": 4115.53,
+    "category": "road-bike"
+  },
+  {
+    "id": "6",
+    "title": "EVO",
+    "image": {
+      "1": {
+        "link": "evo-blue.png",
+        "color": "#00ffff"
+      },
+      "2": {
+        "link": "evo-red.png",
+        "color": "#FF0000"
+      }
+    },
+    "price": 3485.55,
+    "category": "road-bike"
+  },
+  {
+    "id": "7",
+    "title": "Manrola",
+    "image": {
+      "1": {
+        "link": "manrola-black.png",
+        "color": "#FD0329"
+      },
+      "2": {
+        "link": "manrola.png",
+        "color": "#ff2b4b"
+      }
+    },
+    "price": 3185.59,
+    "category": "mountain-bike"
+  },
+  {
+    "id": "8",
+    "title": "Frame",
+    "image": {
+      "1": {
+        "link": "frame-green.png",
+        "color": "#C9E150"
+      },
+      "2": {
+        "link": "frame-orange.png",
+        "color": "#FEA500"
+      }
+    },
+    "price": 879.45,
+    "category": "parts"
+  },
+  {
+    "id": "9",
+    "title": "Gloves",
+    "image": {
+      "1": {
+        "link": "gloves-red.png",
+        "color": "#FF0000"
+      },
+      "2": {
+        "link": "gloves-white.png",
+        "color": "#D9D9D9"
+      }
+    },
+    "price": 245.22,
+    "category": "accessories"
+  },
+  {
+    "id": "10",
+    "title": "TDR 3.000",
+    "image": {
+      "1": {
+        "link": "tdr-red.png",
+        "color": "#FE1A13"
+      },
+      "2": {
+        "link": "tdr.png",
+        "color": "black"
+      }
+    },
+    "price": 5245.55,
+    "category": "Road bike"
+  },
+  {
+    "id": "11",
+    "title": "Vortex",
+    "image": {
+      "1": {
+        "link": "vortex.png",
+        "color": "#EA4D1E"
+      }
+    },
+    "price": 9245.24,
+    "category": "e-series-bike"
+  }
+]
