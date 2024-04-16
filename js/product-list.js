@@ -29,7 +29,7 @@ class ProductList {
     let productListDomString = '';
     let products = await this.productService.getProducts();
     products.forEach(product => {
-      productListDomString += `<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+      productListDomString += `<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-3">
   <div class="card product">
     <div class="card-img-wrapper">
       <img class="card-img-top" src="img/products/${product.image['1'].link}" alt="${product.title}" />

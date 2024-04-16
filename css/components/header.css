@@ -136,7 +136,7 @@ header {
 }
 .fixed-navbar {
   z-index: 3;
-  top: 100px;
+  top: 0px;
   display: block;
   position: sticky;
   background-color: black;
@@ -275,4 +275,14 @@ ul .nav-link {
 }
 .cart-link {
   position: relative;
+}
+@media (max-width: 1120px) {
+  .search input {
+    width: 185px;
+  }
+}
+@media (max-width: 475px) {
+  .search input {
+    width: 140px;
+  }
 }
