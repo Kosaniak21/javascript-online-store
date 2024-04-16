@@ -28,14 +28,11 @@ LIVE DEMO - https://kosaniak21.github.io/javascript-online-store/
 ## Tech Staks:
 
 The application uses the following technologies:<br />
-<br />
 <br />-HTML
 <br />-CSS3 with Flexbox layout and BEM methodology
-<br />-Sass (SCSS) for styling
-<br />-Webpack for bundling
-<br />-React for building UI components
-<br />-Redux for state management
-<br />-React Router for handling navigation
+<br />-Bootstrap
+<br />-JavaScript
+<br />-Swiper library
 
 <div><h1></h1></div>
 
