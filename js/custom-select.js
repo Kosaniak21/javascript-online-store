@@ -10,12 +10,10 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   document.querySelector('.language-list').innerHTML = langArray.join('');
 
-  // Set the button value to the first element of the array
   let btnSelect = document.querySelector('.btn-select');
   btnSelect.innerHTML = langArray[0];
   btnSelect.setAttribute('value', options[0].value);
 
-  // Change button stuff on click
   let aListItems = document.querySelectorAll('.language-list li');
   aListItems.forEach(function (item) {
     item.addEventListener('click', function () {
@@ -29,13 +27,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Toggle dropdown on button click
   btnSelect.addEventListener('click', function () {
     document.querySelector('.dropdown-list').style.display =
       document.querySelector('.dropdown-list').style.display === 'block' ? 'none' : 'block';
   });
 
-  // Check local storage for the lang
   let sessionLang = localStorage.getItem('lang');
   if (sessionLang) {
     let langIndex = langArray.indexOf(sessionLang);

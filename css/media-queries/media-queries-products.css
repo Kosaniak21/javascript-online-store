@@ -26,3 +26,9 @@
     padding-right: 22px;
   }
 }
+@media (max-width: 440px) {
+  .products {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

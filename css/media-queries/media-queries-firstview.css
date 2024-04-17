@@ -160,3 +160,8 @@
     font-size: 14px;
   }
 }
+@media (max-width: 640px) {
+  .firstview {
+    padding-left: 10px;
+  }
+}

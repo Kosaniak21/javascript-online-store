@@ -36,4 +36,4 @@ The application uses the following technologies:<br />
 
 <div><h1></h1></div>
 
-Copyright (c) 2023-present, [Kosaniak Viktor] (https://github.com/Kosaniak21)
+Copyright (c) 2024-present, [Kosaniak Viktor] (https://github.com/Kosaniak21)

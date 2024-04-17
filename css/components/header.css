@@ -61,7 +61,7 @@ header {
   display: none;
   right: 85px;
   position: absolute;
-  z-index: 1;
+  z-index: 5;
   width: 120px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   border: 1px solid rgba(0, 0, 0, 0.15);
