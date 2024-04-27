@@ -11,10 +11,14 @@ class ProductsService {
     }
     return this.products;
   }
-  async getProductById(id) {
+
+  async getProductById(input) {
+    const { id, image } = JSON.parse(input);
     const products = await this.getProducts();
-    return products.find(product => product.id === id);
+    const product = products.find(product => product.id === id);
+    return { product, image };
   }
+
   async getProductByCategory(category) {
     let products = await this.getProducts();
     if (category === 'all') {

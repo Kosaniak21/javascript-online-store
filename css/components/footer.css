@@ -154,6 +154,7 @@ footer {
 }
 .footer-top-last-link {
   grid-column: 1 / span 2;
+  text-align: center;
 }
 .footer-top-links svg {
   width: 25px;

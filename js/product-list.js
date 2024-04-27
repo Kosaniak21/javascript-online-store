@@ -4,10 +4,11 @@ class ProductList {
     this.container = document.querySelector('.products-container');
     this.filterButtons = document.querySelectorAll('.products-filters-button');
     this.productService = new ProductsService();
-    this.productService
-      .getProducts()
-      .then(() => this.renderProducts())
-      .then(() => this.addEventListeners());
+    this.productService.getProducts().then(products => {
+      this.products = products;
+      this.renderProductList(products);
+      this.addEventListeners();
+    });
   }
 
   createButtonsColor(product) {
@@ -25,30 +26,35 @@ class ProductList {
     }
     return buttonsListDomString;
   }
-  async renderProducts() {
+
+  renderProductList(products) {
     let productListDomString = '';
-    let products = await this.productService.getProducts();
     products.forEach(product => {
-      productListDomString += `<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-3">
-  <div class="card product">
-    <div class="card-img-wrapper">
-      <img class="card-img-top" src="img/products/${product.image['1'].link}" alt="${product.title}" />
-    </div>
-    <div class="card-body d-flex flex-column">
-      <h4 class="card-title">${product.title}</h4>
-      <p class="card-text">$${product.price}</p>
-      <fieldset class="color-buttons" for="${product.title}">
-        ${this.createButtonsColor(product)}
-      </fieldset>
-    </div>
-    <div class="card-like-button">
-      <button id="heart" data-id="${product.id}"><i id="heart-icon" class="fa-regular fa-heart"></i></button>
-    </div>
-  </div>
-</div>`;
+      const isLiked = localStorage.getItem(`liked_${product.id}`) === 'true';
+      const heartClass = isLiked ? 'fa-solid' : 'fa-regular';
+      productListDomString += `
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-3">
+          <div class="card product">
+            <div class="card-img-wrapper" data-id="${product.id}">
+              <img class="card-img-top" src="img/products/${product.image['1'].link}" alt="${product.title}" />
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title">${product.title}</h4>
+              <p class="card-text">$${product.price}</p>
+              <fieldset class="color-buttons" for="${product.title}">
+                ${this.createButtonsColor(product)}
+              </fieldset>
+              <button class="buy-button btn btn-primary" data-color="${product.image['1'].link}" data-id="${product.id}" type="button">ADD TO CART</button>
+            </div>
+            <div class="card-like-button">
+              <button id="heart" data-id="${product.id}"  class="heart-button"><i class="${heartClass} fa-heart"></i></button>
+            </div>
+          </div>
+        </div>`;
     });
 
     this.container.innerHTML = productListDomString;
+
     this.container.addEventListener('click', event => {
       const colorButton = event.target.closest('.card-product-color');
       if (colorButton) {
@@ -56,32 +62,39 @@ class ProductList {
         const card = colorButton.closest('.card');
         const imageProduct = card.querySelector('.card-img-top');
         imageProduct.src = `img/products/${product.image[colorButton.dataset.color].link}`;
-      }
-      const heartButton = event.target.closest('#heart');
-      if (heartButton) {
-        const heartIcon = heartButton.querySelector('i');
-        heartIcon.classList.toggle('fa-regular');
-        heartIcon.classList.toggle('fa-solid');
-      } else if (event.target.matches('#heart-icon')) {
-        const heartIcon = event.target;
-        heartIcon.classList.toggle('fa-regular');
-        heartIcon.classList.toggle('fa-solid');
+        const addToCartButton = card.querySelector('.buy-button');
+        if (addToCartButton) {
+          addToCartButton.setAttribute('data-color', product.image[colorButton.dataset.color].link);
+        }
       }
     });
   }
 
   addEventListeners() {
+    this.container.addEventListener('click', event => {
+      const heartButton = event.target.closest('.heart-button');
+      if (heartButton) {
+        const productId = heartButton.dataset.id;
+        const isLiked = localStorage.getItem(`liked_${productId}`) === 'true';
+        if (isLiked) {
+          localStorage.removeItem(`liked_${productId}`);
+        } else {
+          localStorage.setItem(`liked_${productId}`, 'true');
+        }
+        heartButton.querySelector('i').classList.toggle('fa-solid');
+        heartButton.querySelector('i').classList.toggle('fa-regular');
+      }
+    });
+
     document
-      .querySelectorAll('.product .btn-info')
-      .forEach(button => button.addEventListener('click', event => this.handleProductInfoClick(event)));
-    document
-      .querySelectorAll('.card.product button.buy, #productInfoModal button.buy')
+      .querySelectorAll('.buy-button')
       .forEach(button => button.addEventListener('click', event => this.handleProductBuyClick(event)));
+
     this.filterButtons.forEach(button =>
       button.addEventListener('click', event => {
         const category = event.target.dataset.filter;
         this.productService.getProductByCategory(category).then(filteredProducts => {
-          this.renderFilteredProducts(filteredProducts);
+          this.renderProductList(filteredProducts);
           this.filterButtons.forEach(btn => btn.classList.remove('active'));
           button.classList.add('active');
         });
@@ -89,47 +102,11 @@ class ProductList {
     );
   }
 
-  async renderFilteredProducts(filteredProducts) {
-    let productListDomString = '';
-    filteredProducts.forEach(product => {
-      productListDomString += `<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-        <div class="card product">
-          <div class="card-img-wrapper">
-            <img class="card-img-top" src="img/products/${product.image['1'].link}" alt="${product.title}" />
-          </div>
-          <div class="card-body d-flex flex-column">
-            <h4 class="card-title">${product.title}</h4>
-            <p class="card-text">$${product.price}</p>
-            <div class="color-buttons">
-              ${this.createButtonsColor(product)}
-            </div>
-          </div>
-          <div class="card-like-button">
-            <button id="heart" data-id="${product.id}"><i id="heart-icon" class="fa-regular fa-heart"></i></button>
-          </div>
-        </div>
-      </div>`;
-    });
-    this.container.innerHTML = productListDomString;
-  }
-  async handleProductInfoClick(event) {
-    const button = event.target; // Button that triggered the modal
-    const id = button.dataset.id; // Extract info from data-* attributes
-    const product = await this.productService.getProductById(id);
-    const modal = document.querySelector('#productInfoModal');
-    const productImg = modal.querySelector('.modal-body .card-img-top');
-    productImg.setAttribute('src', 'img/products/' + product.image);
-    productImg.setAttribute('alt', product.title);
-    modal.querySelector('.modal-body .card-title').innerText = product.title;
-    modal.querySelector('.modal-body .card-text').innerText = product.description;
-    const btnBuy = modal.querySelector('button.buy');
-    btnBuy.innerText = `${product.price} - Buy`;
-    btnBuy.dataset.id = id;
-  }
-  handleProductBuyClick(event) {
+  async handleProductBuyClick(event) {
     const button = event.target;
     const id = button.dataset.id;
-    this.cart.addProduct(id);
+    const image = button.dataset.color;
+    this.cart.addProduct(id, image);
     window.showAlert('Product added to cart');
   }
 }

@@ -2,6 +2,7 @@ class Cart {
   constructor() {
     this.cartContainer = document.querySelector('#modal-cart');
     this.cart = JSON.parse(localStorage['cart'] || '{}');
+    this.totalContainer = document.querySelector('#total');
     this.addEventListeners();
     this.updateBadge();
     this.productService = new ProductsService();
@@ -16,72 +17,83 @@ class Cart {
     localStorage['cart'] = JSON.stringify(this.cart);
   }
   async renderCart() {
-    console.log(1);
     let total = 0;
     let cartDomSting = `<div class="container">
-                <div class="row">
-                    <div class="col-5"><strong>Product</strong></div>
-                    <div class="col-3"><strong>Price</strong></div>
-                    <div class="col-2"><strong>Quantity</strong></div>
+                <div class="row modal-titles">
+                    <div class="col-6 modal-product-title">Product</div>
+                    <div class="col-3 d-flex justify-content-end modal-quantity-title">Quantity</div>
+                    <div class="col-3 d-flex justify-content-end modal-price-title">Price</div>
                 </div>`;
-    for (const id in this.cart) {
-      const product = await this.productService.getProductById(id);
-      total += product.price * this.cart[id];
-      cartDomSting += `<div class="row" data-id="${id}"> 
-                    <div class="col-5">${product.title}</div>
-                    <div class="col-3">${product.price}</div>
-                    <div class="col-2">${this.cart[id]}</div>
-                    <div class="col-1"><button data-id=${id} class="btn btn-sm plus">+</button></div>
-                    <div class="col-1"><button data-id=${id} class="btn btn-sm minus">-</button></div>
-                </div>`;
+    for (const item in this.cart) {
+      const { product, image } = await this.productService.getProductById(item);
+      const quantity = this.cart[item];
+      total += product.price * this.cart[item];
+      cartDomSting += `<div class="row cart-buttons" data-id="${product.id}">
+      <div class="col-6 mb-3"><img class="cart-image" src="img/products/${image}" alt="${product.title}"> ${product.title}</div>
+      <div class="col-3 d-flex justify-content-end align-items-center">
+          <button data-item=${item} class="btn btn-sm plus">+</button>
+          ${quantity}
+          <button data-item=${item} class="btn btn-sm minus">-</button>
+      </div>
+      <div class="col-3 d-flex justify-content-end align-items-center">${product.price}</div>
+  </div>`;
     }
     total = total.toFixed(2);
-    cartDomSting += `
-                <div class="row">
-                    <div class="col-5"><strong>TOTAL</strong></div>
-                    <div class="col-3"><strong>$${total}</strong></div>
-                </div>            
-        </div>`;
+
     this.cartContainer.querySelector('.cart-product-list-container').innerHTML = cartDomSting;
-    this.cartContainer
-      .querySelectorAll('.plus')
-      .forEach(el => el.addEventListener('click', ev => this.changeQuantity(ev, this.addProduct)));
+
+    this.totalContainer.innerHTML = `<strong class="total-price">$${total}</strong>`;
+
+    this.cartContainer.querySelectorAll('.plus').forEach(el =>
+      el.addEventListener('click', ev => {
+        const { id, image } = JSON.parse(ev.target.dataset.item);
+        this.addProduct(id, image);
+      }),
+    );
+
     this.cartContainer
       .querySelectorAll('.minus')
       .forEach(el => el.addEventListener('click', ev => this.changeQuantity(ev, this.deleteProduct)));
   }
+
   changeQuantity(ev, operation) {
     const button = ev.target;
-    const id = button.dataset.id;
-    operation.call(this, id);
+    const item = button.dataset.item;
+    operation.call(this, item);
     this.renderCart();
   }
-  addProduct(id) {
-    this.cart[id] = (this.cart[id] || 0) + 1;
+
+  addProduct(id, image) {
+    const productKey = JSON.stringify({ id, image });
+    this.cart[productKey] = (this.cart[productKey] || 0) + 1;
     this.saveCart();
     this.updateBadge();
+    this.renderCart();
   }
-  deleteProduct(id) {
-    if (this.cart[id] > 1) {
-      this.cart[id] -= 1;
+
+  deleteProduct(item) {
+    if (this.cart[item] > 1) {
+      this.cart[item] -= 1;
     } else {
-      delete this.cart[id];
+      delete this.cart[item];
     }
     this.saveCart();
     this.updateBadge();
   }
+
   updateBadge() {
-    document.querySelector('#cart-badge').innerText = this.cartLength();
+    document.querySelector('#cart-badge').innerText = this.productsLength(this.cart);
   }
-  cartLength() {
+  productsLength(obj) {
     let count = 0;
-    for (const key in this.cart) {
-      count += +this.cart[key];
+    for (const key in obj) {
+      count += +obj[key];
     }
     return count;
   }
+
   order(ev) {
-    if (this.cartLength() === 0) {
+    if (this.productsLength(this.cart) === 0) {
       window.showAlert('Please choose products to order', false);
       return;
     }

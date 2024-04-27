@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/components/sale.css" />
     <link rel="stylesheet" href="css/components/running-line.css" />
     <link rel="stylesheet" href="css/components/footer.css" />
+    <link rel="stylesheet" href="css/components/modal-cart.css" />
     <link rel="stylesheet" href="css/media-queries/media-queries-firstview.css" />
     <link rel="stylesheet" href="css/media-queries/media-queries-products.css" />
     <link rel="stylesheet" href="css/media-queries/media-queries-information.css" />
@@ -41,7 +42,7 @@
   </head>
 
   <body>
-    <noscript> <p>You need to enable JavaScript to run this app.</p></noscript>
+    <noscript><h3>You need to enable JavaScript to run this app.</h3></noscript>
     <header class="container-fluid custom-container" id="home">
       <section class="discount-info">
         <div class="number">
@@ -51,27 +52,14 @@
           >
         </div>
         <div class="discount">
-          <p>Get 50% Off Selected Items</p>
-          <a href="#products">Shop now</a>
+          <p class="lng-discount-info">Get 50% Off Selected Items</p>
+          <a href="#products" class="lng-discount-button">Shop now</a>
         </div>
         <div class="language">
-          <select class="language-picker">
-            <option
-              value="uk"
-              class="test"
-              data-thumbnail="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/United-kingdom_flag_icon_round.svg/1024px-United-kingdom_flag_icon_round.svg.png"
-            >
-              English
-            </option>
-            <option value="en" data-thumbnail="https://cdn-icons-png.flaticon.com/512/197/197572.png"> Ukrainian </option>
+          <select id="language" class="form-select custom-select" aria-label="Default select example">
+            <option value="en" selected>EN</option>
+            <option value="ua">UKR</option>
           </select>
-
-          <div class="language-select">
-            <button class="btn-select" value=""></button>
-          </div>
-          <div class="dropdown-list">
-            <ul class="language-list"></ul>
-          </div>
         </div>
       </section>
     </header>
@@ -102,13 +90,13 @@
         <div class="collapse navbar-collapse nav-links" id="navbarTogglerDemo02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#home">Home</a>
+              <a class="nav-link lng-home-link" aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#products">Products</a>
+              <a class="nav-link lng-products-link" href="#products">Products</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contacts">Contacts</a>
+              <a class="nav-link lng-contacts-link" href="#contacts">Contacts</a>
             </li>
           </ul>
           <div>
@@ -118,77 +106,100 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>
-            <div class="modals">
-              <a class="nav-link openCartLink" href="#modal-likes" data-toggle="modal">
-                <i class="fa-regular fa-heart icon-heart"></i>
-                <span id="likes-badge" class="badge badge-light"></span>
-              </a>
-              <a class="nav-link openCartLink cart-link" href="#modal-cart" data-toggle="modal" data-target="#modal-cart">
-                <i class="fas fa-shopping-cart"></i>
-                <span id="cart-badge" class="badge"></span>
-              </a>
-            </div>
+            <button type="button" class="nav-link openCartLink" data-bs-toggle="modal" data-bs-target="#modal-cart">
+              <i class="fas fa-shopping-cart"></i>
+              <span id="cart-badge" class="badge badge-dark"></span>
+            </button>
           </div>
         </div>
       </div>
     </nav>
     <main class="container-fluid custom-container">
       <section class="firstview">
-        <span>LIMITED EDITION</span>
-        <h1>There's not Light Bicycle<br />there's Bicycle A5 Black</h1>
-        <p>
+        <span class="lng-limited-edition">LIMITED EDITION</span>
+        <h1 class="lng-limited-title">There's not Light Bicycle<br />there's Bicycle A5 Black</h1>
+        <p class="lng-limited-description">
           Get your unique bicycle style with our various collections.<br />Our A5 Black are available while stock lasts.
         </p>
-        <div class="firstviews_buttons"> <button>Buy now A5 black</button><button>View collection</button> </div>
+        <div class="firstviews_buttons">
+          <button class="lng-limited-button">Buy now A5 black</button
+          ><button class="lng-limited-button2">View collection</button>
+        </div>
         <img src="img/firstview.png" alt="firstview" />
       </section>
       <section class="products" id="products">
         <div class="products-filters">
-          <button class="products-filters-button active" type="button" data-filter="all">All</button>
-          <button class="products-filters-button" type="button" data-filter="urban-bike">Urban Bike</button>
-          <button class="products-filters-button" type="button" data-filter="accessories">Accessories</button>
-          <button class="products-filters-button" type="button" data-filter="mountain-bike">Mountain Bike</button>
-          <button class="products-filters-button" type="button" data-filter="road-bike">Road Bike</button>
-          <button class="products-filters-button" type="button" data-filter="e-series-bike">E-Series Bike</button>
-          <button class="products-filters-button" type="button" data-filter="parts">Parts</button>
+          <button class="products-filters-button lng-filter-all active" type="button" data-filter="all">All</button>
+          <button class="products-filters-button lng-filter-urban-bike" type="button" data-filter="urban-bike"
+            >Urban Bike</button
+          >
+          <button class="products-filters-button lng-filter-accessories" type="button" data-filter="accessories"
+            >Accessories</button
+          >
+          <button class="products-filters-button lng-filter-mountain-bike" type="button" data-filter="mountain-bike"
+            >Mountain Bike</button
+          >
+          <button class="products-filters-button lng-filter-road-bike" type="button" data-filter="road-bike"
+            >Road Bike</button
+          >
+          <button class="products-filters-button lng-filter-e-series-bike" type="button" data-filter="e-series-bike"
+            >E-Series Bike</button
+          >
+          <button class="products-filters-button lng-filter-parts" type="button" data-filter="parts">Parts</button>
         </div>
         <div class="swiper mySwiper products-filters-slaider">
           <div class="swiper-wrapper">
             <div class="swiper-slide"
-              ><button class="products-filters-button active" type="button" data-filter="all">All</button></div
+              ><button class="products-filters-button lng-filter-all active" type="button" data-filter="all"
+                >All</button
+              ></div
             >
             <div class="swiper-slide"
-              ><button class="products-filters-button" type="button" data-filter="urban-bike">Urban Bike</button></div
+              ><button class="products-filters-button lng-filter-urban-bike" type="button" data-filter="urban-bike"
+                >Urban Bike</button
+              ></div
             >
             <div class="swiper-slide"
-              ><button class="products-filters-button" type="button" data-filter="accessories">Accessories</button></div
+              ><button class="products-filters-button lng-filter-accessories" type="button" data-filter="accessories"
+                >Accessories</button
+              ></div
             >
             <div class="swiper-slide"
-              ><button class="products-filters-button" type="button" data-filter="mountain-bike">Mountain Bike</button></div
+              ><button class="products-filters-button lng-filter-mountain-bike" type="button" data-filter="mountain-bike"
+                >Mountain Bike</button
+              ></div
             >
             <div class="swiper-slide"
-              ><button class="products-filters-button" type="button" data-filter="road-bike">Road Bike</button></div
+              ><button class="products-filters-button lng-filter-road-bike" type="button" data-filter="road-bike"
+                >Road Bike</button
+              ></div
             >
             <div class="swiper-slide"
-              ><button class="products-filters-button" type="button" data-filter="e-series-bike">E-Series Bike</button></div
+              ><button class="products-filters-button lng-filter-e-series-bike" type="button" data-filter="e-series-bike"
+                >E-Series Bike</button
+              ></div
             >
             <div class="swiper-slide"
-              ><button class="products-filters-button" type="button" data-filter="parts">Parts</button></div
+              ><button class="products-filters-button lng-filter-parts" type="button" data-filter="parts">Parts</button></div
             >
           </div>
         </div>
         <div class="row products-container"> </div>
-        <button class="button-all">View all products</button>
+        <button class="button-all lng-button-all">View all products</button>
       </section>
       <section class="information">
         <div class="information--text">
-          <h2>Eveluate your bike with out bike collection</h2>
-          <p> Discovers the latest collection of bike and enhance your style with unique and fantstic collection </p>
+          <h2 class="lng-information-title">Eveluate your bike with out bike collection</h2>
+          <p class="lng-information-description">
+            Discovers the latest collection of bike and enhance your style with unique and fantstic collection
+          </p>
         </div>
         <div class="information--products">
           <div>
             <span>Epsilone T6</span>
-            <h4>Whether it's climbing and going down steep trails or jumping high at bike parks</h4>
+            <h4 class="lng-information2-description"
+              >Whether it's climbing and going down steep trails or jumping high at bike parks</h4
+            >
           </div>
           <div>
             <span>The VanMoof S5</span>
@@ -204,18 +215,18 @@
           </div>
           <div>
             <span>The testing lab</span>
-            <h4>Discover a behind-the-scenes look at our new testing process</h4>
+            <h4 class="lng-information2-description2">Discover a behind-the-scenes look at our new testing process</h4>
           </div>
         </div>
-        <button class="button-all collections">Viem all colections</button>
+        <button class="button-all collections lng-collection-button">Viem all colections</button>
       </section>
       <section class="offline-store">
         <div class="offline-store--title">
           <div>
             <img src="img/logo.png" alt="logo" />
           </div>
-          <h2>Our offline store</h2>
-          <p>
+          <h2 class="lng-offline-store-title">Our offline store</h2>
+          <p class="lng-offline-store-description">
             Our offline store of Morbribe,so you can check the offline store at this below and don't forget to your money
             xixi :)
           </p>
@@ -224,7 +235,7 @@
           <div>
             <address>
               <h5>Morbide Store -- 1901 Thornribge Cir.Shiloh,Hawaii 81063</h5>
-              <p>
+              <p class="lng-offline-store-first">
                 Discover quality and convenience at Monride Store in scenic Shiloh, Hawaii. With a curated selection and
                 genuine hospitality, we're your destination for essentials and more in the heart of paradise.
               </p>
@@ -233,7 +244,7 @@
           <div>
             <address>
               <h5>Morbide Store -- 2464 Royal Ln.Mesa,New Jersey 45463</h5>
-              <p>
+              <p class="lng-offline-store-second">
                 Experience convenience and exceptional quality at Monride Store in Mesa, New Jersey. Explore our curated
                 selection and enjoy genuine hospitality, making us your ultimate go-to destination for essentials and more.
               </p>
@@ -243,8 +254,8 @@
       </section>
       <section class="sale">
         <div class="sale--wrapper">
-          <h2>Grab exchiting deals and speacial promos today,Don't miss out!</h2>
-          <button>Grab now S12 Blue</button>
+          <h2 class="lng-sale-title">Grab exchiting deals and speacial promos today,Don't miss out!</h2>
+          <button class="lng-sale-button">Grab now S12 Blue</button>
         </div>
         <img src="img/s14-blue.png" alt="bicycle-s14-blue" />
       </section>
@@ -312,7 +323,7 @@
           <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
         </div>
         <div>
-          <span>OPEN 13:00 PM - 20:00 PM</span>
+          <span class="lng-time">OPEN 13:00 PM - 20:00 PM</span>
         </div>
         <div class="footer-contact-contacts">
           <a href="tel:380976893264"
@@ -328,7 +339,7 @@
               /></svg
           ></a>
           <a href="mailto:kosvik264@gmail.com"
-            >SUPPORT@MONRIDE.CO <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            >SUPPORT@MONRIDE.COM <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
               <title />
               <g data-name="mail email e-mail letter" id="mail_email_e-mail_letter">
                 <path
@@ -349,7 +360,7 @@
               <span>MENU</span>
             </div>
             <div>
-              <a href=""
+              <a class="lng-footer-delivery" href=""
                 >DELIVERY <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <style>
@@ -366,7 +377,7 @@
                     />
                   </g></svg
               ></a>
-              <a href=""
+              <a class="lng-footer-contact" href=""
                 >CONTACT <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <style>
@@ -383,7 +394,7 @@
                     />
                   </g></svg
               ></a>
-              <a href=""
+              <a class="lng-footer-deals" href=""
                 >DEALS <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <style>
@@ -400,7 +411,7 @@
                     />
                   </g></svg
               ></a>
-              <a href=""
+              <a class="lng-footer-about" href=""
                 >ABOUT <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <style>
@@ -417,7 +428,7 @@
                     />
                   </g></svg
               ></a>
-              <a href="" class="footer-top-last-link"
+              <a href="" class="footer-top-last-link lng-footer-limited"
                 >LIMITED EDITION BIKE!!! <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <style>
@@ -442,7 +453,7 @@
               <span>PRODUCT</span>
             </div>
             <div>
-              <a href=""
+              <a class="lng-footer-e-series" href=""
                 >E-SERIES <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <style>
@@ -459,7 +470,7 @@
                     />
                   </g></svg
               ></a>
-              <a href=""
+              <a class="lng-footer-mountain" href=""
                 >MOUNTAIN <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <style>
@@ -476,7 +487,7 @@
                     />
                   </g></svg
               ></a>
-              <a href=""
+              <a class="lng-footer-urban" href=""
                 >URBAN <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <style>
@@ -493,7 +504,7 @@
                     />
                   </g></svg
               ></a>
-              <a href=""
+              <a class="lng-footer-road" href=""
                 >ROAD <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <style>
@@ -510,7 +521,7 @@
                     />
                   </g></svg
               ></a>
-              <a href="" class="footer-top-last-link"
+              <a href="" class="footer-top-last-link lng-footer-kids"
                 >KIDS <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <style>
@@ -523,7 +534,7 @@
                   <g id="Next">
                     <path
                       class="cls-1"
-                      d="M25.2041,16l-6.37,9.5547A1,1,0,0,1,17.17,24.4453L22.1328,17H7.998a1,1,0,0,1,0-2H22.1328L17.17,7.5547A1,1,0,0,1,18.834,6.4453Z"
+                      d="M25.2041,16l-6.37,.5547A1,1,0,0,1,17.17,24.4453L22.1328,17H7.998a1,1,0,0,1,0-2H22.1328L17.17,7.5547A1,1,0,0,1,18.834,6.4453Z"
                     />
                   </g></svg
               ></a>
@@ -537,7 +548,7 @@
 
             <div class="input-container">
               <input type="text" placeholder="EMAIL" />
-              <button>
+              <button class="lng-subscribe-button">
                 SUBSCRIBE <?xml version="1.0" ?><svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
                   <rect fill="none" height="256" width="256" />
                   <path
@@ -550,7 +561,7 @@
                 </svg>
               </button>
             </div>
-            <p>
+            <p class="lng-subscribe-info">
               Join our newsletter for know about discount, new bikes and many more news. Is free for you, Don't worry sir!
             </p>
           </div>
@@ -563,10 +574,10 @@
         </div>
 
         <div class="footer-bottom-links">
-          <a href="" class="footer-bottom-link">Term of privacy</a>
-          <a href="" class="footer-bottom-link">Policy services</a>
-          <a href="" class="footer-bottom-link">Cookies settings</a>
-          <a href="" class="footer-bottom-link">Legal information</a>
+          <a href="" class="footer-bottom-link lng-bottom-term">Term of privacy</a>
+          <a href="" class="footer-bottom-link lng-bottom-policy">Policy services</a>
+          <a href="" class="footer-bottom-link lng-bottom-cookies">Cookies settings</a>
+          <a href="" class="footer-bottom-link lng-bottom-legal">Legal information</a>
         </div>
         <div class="footer-bottom-social">
           <a href="">
@@ -678,45 +689,37 @@
       </section>
     </footer>
 
-    <!-- Modal Product Info -->
+    <!-- Modal Cart -->
     <div
       class="modal fade"
-      id="productInfoModal"
+      id="modal-cart"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
       tabindex="-1"
-      role="dialog"
-      aria-labelledby="productInfoLabel"
+      aria-labelledby="staticBackdropLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="productInfoLabel">Product Info</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img class="card-img-top" src="" alt="" />
-            <h4 class="card-title"></h4>
-            <p class="card-text"></p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary btn-close" data-dismiss="modal"> Close </button>
-            <button class="btn btn-primary buy" data-id="id">Buy</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal Cart -->
-    <div class="modal fade" id="modal-cart" tabindex="-1" role="dialog" aria-labelledby="cartLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="cartLabel">Cart</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <h3 class="modal-title fs-5" id="staticBackdropLabel">Cart</h3>
+            <button type="button" class="btn btn-secondary close-modal" data-bs-dismiss="modal"
+              ><svg
+                version="1.1"
+                id="cross-11"
+                xmlns="http://www.w3.org/2000/svg"
+                width="21px"
+                height="21px"
+                viewBox="0 0 11 11"
+              >
+                <path
+                  d="M2.2,1.19l3.3,3.3L8.8,1.2C8.9314,1.0663,9.1127,0.9938,9.3,1C9.6761,1.0243,9.9757,1.3239,10,1.7
+              c0.0018,0.1806-0.0705,0.3541-0.2,0.48L6.49,5.5L9.8,8.82C9.9295,8.9459,10.0018,9.1194,10,9.3C9.9757,9.6761,9.6761,9.9757,9.3,10
+              c-0.1873,0.0062-0.3686-0.0663-0.5-0.2L5.5,6.51L2.21,9.8c-0.1314,0.1337-0.3127,0.2062-0.5,0.2C1.3265,9.98,1.02,9.6735,1,9.29
+              C0.9982,9.1094,1.0705,8.9359,1.2,8.81L4.51,5.5L1.19,2.18C1.0641,2.0524,0.9955,1.8792,1,1.7C1.0243,1.3239,1.3239,1.0243,1.7,1
+              C1.8858,0.9912,2.0669,1.06,2.2,1.19z"
+                ></path></svg
+            ></button>
           </div>
           <div class="modal-body">
             <div class="cart-product-list-container"></div>
@@ -724,57 +727,25 @@
             <div class="container">
               <form class="form-contacts">
                 <div class="form-group row">
-                  <label for="client-name" class="col-4 col-form-label">Your name:</label>
-                  <input class="form-control col-8" type="text" id="client-name" required />
+                  <!-- <label for="client-name" class="col-4 col-form-label lng-modal-name">Your name:</label> -->
+                  <input placeholder="Your name" class="form-control col-12" type="text" id="client-name" required />
                 </div>
                 <div class="form-group row">
-                  <label for="client-email" class="col-4 col-form-label">Your email:</label>
-                  <input class="form-control col-8" type="email" id="client-email" required />
+                  <!-- <label for="client-email" class="col-4 col-form-label lng-modal-email">Your email:</label> -->
+                  <input placeholder="Your email" class="form-control col-12" type="email" id="client-email" required />
                 </div>
               </form>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary btn-close" data-dismiss="modal"> Close </button>
-            <button class="btn btn-primary order">Order</button>
+            <span>Total value</span>
+            <span id="total" class="total"></span>
+            <button class="btn btn-primary order lng-modal-order">Order</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Modal likes -->
-    <div class="modal fade" id="modal-likes" tabindex="-1" role="dialog" aria-labelledby="cartLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="cartLabel">Cart</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="cart-product-list-container"></div>
-            <hr />
-            <div class="container">
-              <form class="form-contacts">
-                <div class="form-group row">
-                  <label for="client-name" class="col-4 col-form-label">Your name:</label>
-                  <input class="form-control col-8" type="text" id="client-name" required />
-                </div>
-                <div class="form-group row">
-                  <label for="client-email" class="col-4 col-form-label">Your email:</label>
-                  <input class="form-control col-8" type="email" id="client-email" required />
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary btn-close" data-dismiss="modal"> Close </button>
-            <button class="btn btn-primary order">Order</button>
-          </div>
-        </div>
-      </div>
-    </div>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -789,11 +760,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/6d5f36987c.js" crossorigin="anonymous"></script>
+    <script src="js/lang.js"></script>
+    <script src="js/lang-script.js"></script>
     <script async src="js/alert-window.js"></script>
     <script defer src="js/products-service.js"></script>
     <script defer src="js/cart.js"></script>
     <script defer src="js/product-list.js"></script>
-    <script defer src="js/custom-select.js"></script>
     <script defer src="js/swiper.js" type="module"></script>
     <script defer src="js/index.js"></script>
   </body>
