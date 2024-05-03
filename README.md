@@ -2,6 +2,8 @@
 
 Welcome to the JavaScript Online Store - Bicycle Shop! This online store specializes in selling bicycles of various types. Customers can browse through the collection, add items to their cart, mark items as favorites, and enjoy other main functionalities provided by the store.
 
+## LIVE DEMO - https://kosaniak21.github.io/javascript-online-store/
+
 ## Features
 
 ### 1. Browse and Search Bicycles
@@ -23,8 +25,6 @@ Welcome to the JavaScript Online Store - Bicycle Shop! This online store special
 
 - Enjoy a seamless shopping experience across devices, including desktop, tablet, and mobile.
 
-LIVE DEMO - https://kosaniak21.github.io/javascript-online-store/
-
 ## Tech Staks:
 
 The application uses the following technologies:<br />
@@ -36,6 +36,44 @@ The application uses the following technologies:<br />
 <br />-Node.js
 <br />-SendGrid for sending emails
 
+## Setup
+
+To run this project locally, follow these steps:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Kosaniak21/javascript-online-store.git
+```
+
+2. Navigate to the project directory
+
+```bash
+cd javascript-online-store
+```
+
+3.Install dependencies:
+
+```bash
+npm install
+```
+
+4.Start the development server:
+
+```bash
+node server.js
+```
+
+5.Open your browser and visit http://localhost:4000 to view the application locally.
+
 <div><h1></h1></div>
 
 Copyright (c) 2024-present, [Kosaniak Viktor] (https://github.com/Kosaniak21)
+
+```
+
+```
+
+```
+
+```
