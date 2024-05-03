@@ -33,6 +33,8 @@ The application uses the following technologies:<br />
 <br />-Bootstrap
 <br />-JavaScript
 <br />-Swiper library
+<br />-Node.js
+<br />-SendGrid for sending emails
 
 <div><h1></h1></div>
 
