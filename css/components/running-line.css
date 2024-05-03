@@ -2,11 +2,13 @@
   padding-top: 28px;
   background-color: black;
 }
+
 .header {
   overflow: hidden;
   height: 50px;
   position: relative;
   width: 100%;
+
   div {
     display: flex;
     flex-direction: row;
@@ -24,11 +26,13 @@
       color: #ffffff;
       margin: 0px;
     }
+
     img {
       height: 27px;
       width: 27px;
     }
   }
+
   .ticker-wrapper__first-half,
   .ticker-wrapper__second-half {
     display: flex;

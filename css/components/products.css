@@ -6,14 +6,17 @@
     color: #fff;
   }
 }
+
 .products-filters-slaider {
   display: none !important;
 }
+
 .products-filters {
   display: flex;
   justify-content: space-between;
   padding-bottom: 40px;
 }
+
 .products-filters-button {
   text-decoration: none;
   color: black;
@@ -25,16 +28,19 @@
   font-weight: 500;
   transition: all 0.4s ease;
 }
+
 .products-filters-button:hover,
 .products-filters-active-link {
   background-color: black;
   color: #fff;
 }
+
 .all-products:hover {
   background-color: transparent;
   border: 1px solid black;
   color: black;
 }
+
 .products-filters-button.active {
   background-color: black;
   color: #fff;

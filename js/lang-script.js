@@ -19,7 +19,9 @@ function changeUrlLanguage(newLang) {
 
 function changeLanguage() {
   for (let key in langData) {
-    document.querySelector(`.lng-${key}`).innerHTML = langData[key][lang];
+    if (document.querySelector(`.lng-${key}`)) {
+      document.querySelector(`.lng-${key}`).innerHTML = langData[key][lang];
+    }
   }
 }
 document.addEventListener('DOMContentLoaded', function () {

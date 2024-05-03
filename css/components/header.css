@@ -81,6 +81,10 @@ header {
   color: white;
 }
 
+.navbar-container {
+  padding: 0;
+}
+
 .navbar i {
   font-size: 18px;
 }
@@ -237,16 +241,4 @@ ul .nav-link {
 
 .cart-link {
   position: relative;
-}
-
-@media (max-width: 1120px) {
-  .search input {
-    width: 185px;
-  }
-}
-
-@media (max-width: 475px) {
-  .search input {
-    width: 140px;
-  }
 }

@@ -3,31 +3,37 @@
   .ticker-wrapper__first-half img:nth-of-type(11) {
     display: none;
   }
+
   .ticker-wrapper__second-half p:nth-of-type(11),
   .ticker-wrapper__second-half img:nth-of-type(11) {
     display: none;
   }
 }
+
 @media (max-width: 1620px) {
   .ticker-wrapper__first-half p:nth-of-type(10),
   .ticker-wrapper__first-half img:nth-of-type(10) {
     display: none;
   }
+
   .ticker-wrapper__second-half p:nth-of-type(10),
   .ticker-wrapper__second-half img:nth-of-type(10) {
     display: none;
   }
 }
+
 @media (max-width: 1550px) {
   .ticker-wrapper__first-half p:nth-of-type(9),
   .ticker-wrapper__first-half img:nth-of-type(9) {
     display: none;
   }
+
   .ticker-wrapper__second-half p:nth-of-type(9),
   .ticker-wrapper__second-half img:nth-of-type(9) {
     display: none;
   }
 }
+
 @media (max-width: 1360px) {
   .ticker-wrapper__first-half p:nth-of-type(8),
   .ticker-wrapper__first-half img:nth-of-type(8) {
@@ -38,69 +44,83 @@
     display: none;
   }
 }
+
 @media (max-width: 1130px) {
   .ticker-wrapper__first-half p:nth-of-type(7),
   .ticker-wrapper__first-half img:nth-of-type(7) {
     display: none;
   }
+
   .ticker-wrapper__second-half p:nth-of-type(7),
   .ticker-wrapper__second-half img:nth-of-type(7) {
     display: none;
   }
 }
+
 @media (max-width: 978px) {
   .ticker-wrapper__first-half p:nth-of-type(6),
   .ticker-wrapper__first-half img:nth-of-type(6) {
     display: none;
   }
+
   .ticker-wrapper__second-half p:nth-of-type(6),
   .ticker-wrapper__second-half img:nth-of-type(6) {
     display: none;
   }
 }
+
 @media (max-width: 790px) {
   .header div p {
     font-size: 16px;
   }
+
   .header div img {
     height: 24px;
     width: 24px;
   }
 }
+
 @media (max-width: 670px) {
   .ticker-wrapper__first-half p:nth-of-type(5),
   .ticker-wrapper__first-half img:nth-of-type(5) {
     display: none;
   }
+
   .ticker-wrapper__second-half p:nth-of-type(5),
   .ticker-wrapper__second-half img:nth-of-type(5) {
     display: none;
   }
 }
+
 @media (max-width: 670px) {
   .ticker-wrapper__first-half p:nth-of-type(5),
   .ticker-wrapper__first-half img:nth-of-type(5) {
     display: none;
   }
+
   .ticker-wrapper__second-half p:nth-of-type(5),
   .ticker-wrapper__second-half img:nth-of-type(5) {
     display: none;
   }
 }
+
 @media (max-width: 540px) {
   .ticker-wrapper__first-half p:nth-of-type(4),
   .ticker-wrapper__first-half img:nth-of-type(4) {
     display: none;
   }
+
   .ticker-wrapper__second-half p:nth-of-type(4),
   .ticker-wrapper__second-half img:nth-of-type(4) {
     display: none;
   }
 }
+
 @media (max-width: 500px) {
   .header div p {
     font-size: 14px;
   }
+
   .header div img {
     height: 22px;
     width: 22px;

@@ -5,6 +5,7 @@
   color: white;
   padding-left: 85px;
   padding-top: 120px;
+
   ::selection {
     background-color: #cccccc;
     color: #fff;
@@ -53,19 +54,21 @@
   font-size: 61px;
   margin-bottom: 20px;
   margin-top: 20px;
+  position: relative;
 }
 
 .firstview p {
   font-weight: 100;
   font-size: 20px;
   width: 40%;
+  position: relative;
 }
 
 .firstview img {
   position: absolute;
   right: 0px;
-  top: 25%;
-  width: 63%;
+  top: 220px;
+  width: 60%;
 }
 
 .firstview :not(img) {

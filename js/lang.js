@@ -39,34 +39,6 @@ const langData = {
     en: 'View collection',
     ua: 'Переглянути колекцію',
   },
-  'filter-all': {
-    en: 'All',
-    ua: 'Всі',
-  },
-  'filter-urban-bike': {
-    en: 'Urban Bike',
-    ua: 'Міський велосипед',
-  },
-  'filter-accessories': {
-    en: 'Accessories',
-    ua: 'Аксесуари',
-  },
-  'filter-mountain-bike': {
-    en: 'Mountain Bike',
-    ua: 'Гірський велосипед',
-  },
-  'filter-road-bike': {
-    en: 'Road Bike',
-    ua: 'Шосейний велосипед',
-  },
-  'filter-e-series-bike': {
-    en: 'E-Series Bike',
-    ua: 'Велосипеди серії E',
-  },
-  'filter-parts': {
-    en: 'Parts',
-    ua: 'Деталі',
-  },
   'button-all': {
     en: 'View all products',
     ua: 'Переглянути всі продукти',
@@ -77,9 +49,13 @@ const langData = {
   },
   'information-description': {
     en: 'Discover the latest bike collection and enhance your style with unique and fantastic collections.',
-    ua: 'Відкрийте для себе останню колекцію велосипедів та підкресліть свій стиль унікальними та фантастичними колекціями.',
+    ua: 'Відкрийте для себе останню колекцію велосипедів та підкресліть свій стиль унікальними колекціями.',
   },
-  'information2-description2': {
+  'information-second-description-two': {
+    en: 'Discover a behind-the-scenes look at our new testing process',
+    ua: 'Відкрийте для себе перегляд нашого нового тестування',
+  },
+  'information-second-description': {
     en: "Whether it's climbing and going down steep trails or jumping high at bike parks",
     ua: 'Це круті траси або стрибки високо в велопарках',
   },
@@ -111,8 +87,8 @@ const langData = {
     en: 'Grab now S12 Blue',
     ua: 'Захопіть зараз S12 Blue',
   },
-  time: {
-    en: 'OPEN 13:00 PM - 20:00 PM',
+  'footer-time': {
+    en: 'OPEN 13:00 - 20:00',
     ua: 'ВІДКРИТО 13:00 - 20:00',
   },
   'footer-delivery': {
@@ -178,5 +154,85 @@ const langData = {
   'subscribe-info': {
     en: `Join our newsletter to stay informed about discounts, new bikes, and much more. It's free for you, so don't worry!`,
     ua: 'Приєднуйтесь до нашої розсилки, щоб бути в курсі знижок, нових велосипедів та багато іншого. Це безкоштовно для вас, так що не хвилюйтеся!',
+  },
+  'modal-title': {
+    en: 'Cart',
+    ua: 'Корзина',
+  },
+  'modal-order': {
+    en: 'Order',
+    ua: 'Замовити',
+  },
+  'modal-total': {
+    en: 'Total value:',
+    ua: 'Загальна вартість:',
+  },
+  'modal-quantity': {
+    en: 'Quantity:',
+    ua: 'Кількість:',
+  },
+  'modal-product': {
+    en: 'Product:',
+    ua: 'Товар:',
+  },
+  'modal-price': {
+    en: 'Price:',
+    ua: 'Ціна:',
+  },
+  'filter-all': {
+    en: 'All',
+    ua: 'Всі',
+  },
+  'filter-urban-bike': {
+    en: 'Urban Bike',
+    ua: 'Міський велосипед',
+  },
+  'filter-accessories': {
+    en: 'Accessories',
+    ua: 'Аксесуари',
+  },
+  'filter-mountain-bike': {
+    en: 'Mountain Bike',
+    ua: 'Гірський велосипед',
+  },
+  'filter-road-bike': {
+    en: 'Road Bike',
+    ua: 'Шосейний велосипед',
+  },
+  'filter-e-series-bike': {
+    en: 'E-Series Bike',
+    ua: 'Велосипеди серії E',
+  },
+  'filter-parts': {
+    en: 'Parts',
+    ua: 'Деталі',
+  },
+  'filter-all2': {
+    en: 'All',
+    ua: 'Всі',
+  },
+  'filter-urban-bike2': {
+    en: 'Urban Bike',
+    ua: 'Міський велосипед',
+  },
+  'filter-accessories2': {
+    en: 'Accessories',
+    ua: 'Аксесуари',
+  },
+  'filter-mountain-bike2': {
+    en: 'Mountain Bike',
+    ua: 'Гірський велосипед',
+  },
+  'filter-road-bike2': {
+    en: 'Road Bike',
+    ua: 'Шосейний велосипед',
+  },
+  'filter-e-series-bike2': {
+    en: 'E-Series Bike',
+    ua: 'Велосипеди серії E',
+  },
+  'filter-parts2': {
+    en: 'Parts',
+    ua: 'Деталі',
   },
 };

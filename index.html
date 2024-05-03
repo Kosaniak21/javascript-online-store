@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/components/running-line.css" />
     <link rel="stylesheet" href="css/components/footer.css" />
     <link rel="stylesheet" href="css/components/modal-cart.css" />
+    <link rel="stylesheet" href="css/media-queries/media-queries-header.css" />
     <link rel="stylesheet" href="css/media-queries/media-queries-firstview.css" />
     <link rel="stylesheet" href="css/media-queries/media-queries-products.css" />
     <link rel="stylesheet" href="css/media-queries/media-queries-information.css" />
@@ -25,6 +26,7 @@
     <link rel="stylesheet" href="css/media-queries/media-queries-sale.css" />
     <link rel="stylesheet" href="css/media-queries/media-queries-running-line.css" />
     <link rel="stylesheet" href="css/media-queries/media-queries-footer.css" />
+    <link rel="stylesheet" href="css/media-queries/media-queries-modal-cart.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -64,7 +66,7 @@
       </section>
     </header>
     <nav class="navbar navbar-expand-lg fixed-navbar">
-      <div class="container-fluid">
+      <div class="container-fluid navbar-container">
         <div class="logo navbar-brand">
           <img src="img/logo.png" alt="logo" />
           <a class="navbar-brand" href="#">MORDRIDE</a>
@@ -117,89 +119,80 @@
     <main class="container-fluid custom-container">
       <section class="firstview">
         <span class="lng-limited-edition">LIMITED EDITION</span>
-        <h1 class="lng-limited-title">There's not Light Bicycle<br />there's Bicycle A5 Black</h1>
-        <p class="lng-limited-description">
-          Get your unique bicycle style with our various collections.<br />Our A5 Black are available while stock lasts.
-        </p>
+        <h1 class="lng-limited-title"></h1>
+        <p class="lng-limited-description"></p>
         <div class="firstviews_buttons">
-          <button class="lng-limited-button">Buy now A5 black</button
-          ><button class="lng-limited-button2">View collection</button>
+          <button class="lng-limited-button"></button><button class="lng-limited-button2"></button>
         </div>
         <img src="img/firstview.png" alt="firstview" />
       </section>
       <section class="products" id="products">
         <div class="products-filters">
-          <button class="products-filters-button lng-filter-all active" type="button" data-filter="all">All</button>
-          <button class="products-filters-button lng-filter-urban-bike" type="button" data-filter="urban-bike"
-            >Urban Bike</button
-          >
-          <button class="products-filters-button lng-filter-accessories" type="button" data-filter="accessories"
-            >Accessories</button
-          >
-          <button class="products-filters-button lng-filter-mountain-bike" type="button" data-filter="mountain-bike"
-            >Mountain Bike</button
-          >
-          <button class="products-filters-button lng-filter-road-bike" type="button" data-filter="road-bike"
-            >Road Bike</button
-          >
-          <button class="products-filters-button lng-filter-e-series-bike" type="button" data-filter="e-series-bike"
-            >E-Series Bike</button
-          >
-          <button class="products-filters-button lng-filter-parts" type="button" data-filter="parts">Parts</button>
+          <button class="products-filters-button lng-filter-all active" type="button" data-filter="all"></button>
+          <button class="products-filters-button lng-filter-urban-bike" type="button" data-filter="urban-bike"></button>
+          <button class="products-filters-button lng-filter-accessories" type="button" data-filter="accessories"></button>
+          <button
+            class="products-filters-button lng-filter-mountain-bike"
+            type="button"
+            data-filter="mountain-bike"
+          ></button>
+          <button class="products-filters-button lng-filter-road-bike" type="button" data-filter="road-bike"></button>
+          <button
+            class="products-filters-button lng-filter-e-series-bike"
+            type="button"
+            data-filter="e-series-bike"
+          ></button>
+          <button class="products-filters-button lng-filter-parts" type="button" data-filter="parts"></button>
         </div>
         <div class="swiper mySwiper products-filters-slaider">
           <div class="swiper-wrapper">
             <div class="swiper-slide"
-              ><button class="products-filters-button lng-filter-all active" type="button" data-filter="all"
-                >All</button
-              ></div
-            >
+              ><button class="products-filters-button lng-filter-all2 active" type="button" data-filter="all"></button
+            ></div>
             <div class="swiper-slide"
-              ><button class="products-filters-button lng-filter-urban-bike" type="button" data-filter="urban-bike"
-                >Urban Bike</button
-              ></div
-            >
+              ><button class="products-filters-button lng-filter-urban-bike2" type="button" data-filter="urban-bike"></button
+            ></div>
             <div class="swiper-slide"
-              ><button class="products-filters-button lng-filter-accessories" type="button" data-filter="accessories"
-                >Accessories</button
-              ></div
-            >
+              ><button
+                class="products-filters-button lng-filter-accessories2"
+                type="button"
+                data-filter="accessories"
+              ></button
+            ></div>
             <div class="swiper-slide"
-              ><button class="products-filters-button lng-filter-mountain-bike" type="button" data-filter="mountain-bike"
-                >Mountain Bike</button
-              ></div
-            >
+              ><button
+                class="products-filters-button lng-filter-mountain-bike2"
+                type="button"
+                data-filter="mountain-bike"
+              ></button
+            ></div>
             <div class="swiper-slide"
-              ><button class="products-filters-button lng-filter-road-bike" type="button" data-filter="road-bike"
-                >Road Bike</button
-              ></div
-            >
+              ><button class="products-filters-button lng-filter-road-bike2" type="button" data-filter="road-bike"></button
+            ></div>
             <div class="swiper-slide"
-              ><button class="products-filters-button lng-filter-e-series-bike" type="button" data-filter="e-series-bike"
-                >E-Series Bike</button
-              ></div
-            >
+              ><button
+                class="products-filters-button lng-filter-e-series-bike2"
+                type="button"
+                data-filter="e-series-bike"
+              ></button
+            ></div>
             <div class="swiper-slide"
-              ><button class="products-filters-button lng-filter-parts" type="button" data-filter="parts">Parts</button></div
-            >
+              ><button class="products-filters-button lng-filter-parts2" type="button" data-filter="parts"></button
+            ></div>
           </div>
         </div>
         <div class="row products-container"> </div>
-        <button class="button-all lng-button-all">View all products</button>
+        <button class="button-all lng-button-all"></button>
       </section>
       <section class="information">
         <div class="information--text">
-          <h2 class="lng-information-title">Eveluate your bike with out bike collection</h2>
-          <p class="lng-information-description">
-            Discovers the latest collection of bike and enhance your style with unique and fantstic collection
-          </p>
+          <h2 class="lng-information-title"></h2>
+          <p class="lng-information-description"></p>
         </div>
         <div class="information--products">
           <div>
             <span>Epsilone T6</span>
-            <h4 class="lng-information2-description"
-              >Whether it's climbing and going down steep trails or jumping high at bike parks</h4
-            >
+            <h4 class="lng-information-second-description"></h4>
           </div>
           <div>
             <span>The VanMoof S5</span>
@@ -215,46 +208,37 @@
           </div>
           <div>
             <span>The testing lab</span>
-            <h4 class="lng-information2-description2">Discover a behind-the-scenes look at our new testing process</h4>
+            <h4 class="lng-information-second-description-two"></h4>
           </div>
         </div>
-        <button class="button-all collections lng-collection-button">Viem all colections</button>
+        <button class="button-all collections lng-collection-button"></button>
       </section>
       <section class="offline-store">
         <div class="offline-store--title">
           <div>
             <img src="img/logo.png" alt="logo" />
           </div>
-          <h2 class="lng-offline-store-title">Our offline store</h2>
-          <p class="lng-offline-store-description">
-            Our offline store of Morbribe,so you can check the offline store at this below and don't forget to your money
-            xixi :)
-          </p>
+          <h2 class="lng-offline-store-title"></h2>
+          <p class="lng-offline-store-description"> </p>
         </div>
         <div class="offline-store--wrapper">
           <div>
             <address>
               <h5>Morbide Store -- 1901 Thornribge Cir.Shiloh,Hawaii 81063</h5>
-              <p class="lng-offline-store-first">
-                Discover quality and convenience at Monride Store in scenic Shiloh, Hawaii. With a curated selection and
-                genuine hospitality, we're your destination for essentials and more in the heart of paradise.
-              </p>
+              <p class="lng-offline-store-first"> </p>
             </address>
           </div>
           <div>
             <address>
               <h5>Morbide Store -- 2464 Royal Ln.Mesa,New Jersey 45463</h5>
-              <p class="lng-offline-store-second">
-                Experience convenience and exceptional quality at Monride Store in Mesa, New Jersey. Explore our curated
-                selection and enjoy genuine hospitality, making us your ultimate go-to destination for essentials and more.
-              </p>
+              <p class="lng-offline-store-second"> </p>
             </address>
           </div>
         </div>
       </section>
       <section class="sale">
         <div class="sale--wrapper">
-          <h2 class="lng-sale-title">Grab exchiting deals and speacial promos today,Don't miss out!</h2>
+          <h2 class="lng-sale-title"></h2>
           <button class="lng-sale-button">Grab now S12 Blue</button>
         </div>
         <img src="img/s14-blue.png" alt="bicycle-s14-blue" />
@@ -323,7 +307,7 @@
           <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
         </div>
         <div>
-          <span class="lng-time">OPEN 13:00 PM - 20:00 PM</span>
+          <span class="lng-footer-time">OPEN 13:00 PM - 20:00 PM</span>
         </div>
         <div class="footer-contact-contacts">
           <a href="tel:380976893264"
@@ -561,9 +545,7 @@
                 </svg>
               </button>
             </div>
-            <p class="lng-subscribe-info">
-              Join our newsletter for know about discount, new bikes and many more news. Is free for you, Don't worry sir!
-            </p>
+            <p class="lng-subscribe-info"> </p>
           </div>
         </div>
       </section>
@@ -574,10 +556,10 @@
         </div>
 
         <div class="footer-bottom-links">
-          <a href="" class="footer-bottom-link lng-bottom-term">Term of privacy</a>
-          <a href="" class="footer-bottom-link lng-bottom-policy">Policy services</a>
-          <a href="" class="footer-bottom-link lng-bottom-cookies">Cookies settings</a>
-          <a href="" class="footer-bottom-link lng-bottom-legal">Legal information</a>
+          <a href="" class="footer-bottom-link lng-bottom-term"></a>
+          <a href="" class="footer-bottom-link lng-bottom-policy"></a>
+          <a href="" class="footer-bottom-link lng-bottom-cookies"></a>
+          <a href="" class="footer-bottom-link lng-bottom-legal"></a>
         </div>
         <div class="footer-bottom-social">
           <a href="">
@@ -702,7 +684,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h3 class="modal-title fs-5" id="staticBackdropLabel">Cart</h3>
+            <h3 class="modal-title fs-5 lng-modal-title" id="staticBackdropLabel">Cart</h3>
             <button type="button" class="btn btn-secondary close-modal" data-bs-dismiss="modal"
               ><svg
                 version="1.1"
@@ -727,20 +709,18 @@
             <div class="container">
               <form class="form-contacts">
                 <div class="form-group row">
-                  <!-- <label for="client-name" class="col-4 col-form-label lng-modal-name">Your name:</label> -->
                   <input placeholder="Your name" class="form-control col-12" type="text" id="client-name" required />
                 </div>
                 <div class="form-group row">
-                  <!-- <label for="client-email" class="col-4 col-form-label lng-modal-email">Your email:</label> -->
                   <input placeholder="Your email" class="form-control col-12" type="email" id="client-email" required />
                 </div>
               </form>
             </div>
           </div>
           <div class="modal-footer">
-            <span>Total value</span>
+            <span class="lng-modal-total">Total value:</span>
             <span id="total" class="total"></span>
-            <button class="btn btn-primary order lng-modal-order">Order</button>
+            <button class="btn btn-primary order lng-modal-order"></button>
           </div>
         </div>
       </div>
@@ -762,6 +742,7 @@
     <script src="https://kit.fontawesome.com/6d5f36987c.js" crossorigin="anonymous"></script>
     <script src="js/lang.js"></script>
     <script src="js/lang-script.js"></script>
+    <script src="js/utils.js"></script>
     <script async src="js/alert-window.js"></script>
     <script defer src="js/products-service.js"></script>
     <script defer src="js/cart.js"></script>

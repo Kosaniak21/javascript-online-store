@@ -44,7 +44,7 @@ class ProductList {
               <fieldset class="color-buttons" for="${product.title}">
                 ${this.createButtonsColor(product)}
               </fieldset>
-              <button class="buy-button btn btn-primary" data-color="${product.image['1'].link}" data-id="${product.id}" type="button">ADD TO CART</button>
+              <button class="lng-button-add-to-cart buy-button btn btn-primary" data-color="${product.image['1'].link}" data-id="${product.id}" type="button">ADD TO CART</button>
             </div>
             <div class="card-like-button">
               <button id="heart" data-id="${product.id}"  class="heart-button"><i class="${heartClass} fa-heart"></i></button>

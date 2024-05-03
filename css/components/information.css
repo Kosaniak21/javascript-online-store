@@ -9,12 +9,14 @@
     color: #fff;
   }
 }
+
 .information--text {
   display: flex;
   flex-direction: row;
   margin-bottom: 35px;
   justify-content: space-between;
 }
+
 .information--text h2 {
   font-family: 'Roboto', sans-serif !important;
   font-size: 54px;
@@ -22,6 +24,7 @@
   line-height: 50px;
   font-weight: bold;
 }
+
 .information--text p {
   width: 50%;
   display: flex;
@@ -29,11 +32,13 @@
   font-size: 25px;
   font-weight: 300;
 }
+
 .information--products {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 28px;
 }
+
 .information--products div:nth-child(1) {
   grid-column: 1 / span 2;
   position: relative;
@@ -52,6 +57,7 @@
   transition: all 0.6s;
   backdrop-filter: blur(5px);
 }
+
 .information--products div:nth-child(4) {
   grid-column: 1 / span 2;
   position: relative;
@@ -71,12 +77,14 @@
   backdrop-filter: blur(5px);
   margin-bottom: 45px;
 }
+
 .information--products div:nth-child(1):hover,
 .information--products div:nth-child(4):hover {
   transition: all 0.6s;
   background-color: rgba(255, 255, 255, 0.5);
   background-size: 110%;
 }
+
 .information--products div:nth-child(1)::before {
   border-radius: 16px;
   content: '';
@@ -93,6 +101,7 @@
   transition: all 0.6s;
   z-index: -1;
 }
+
 .information--products div:nth-child(4)::before {
   border-radius: 16px;
   content: '';
@@ -109,11 +118,13 @@
   transition: all 0.6s;
   z-index: -1;
 }
+
 .information--products div:nth-child(1):hover::before,
 .information--products div:nth-child(4):hover::before {
   filter: blur(5px);
   background-size: 110%;
 }
+
 .information--products div:nth-child(1) h4,
 .information--products div:nth-child(4) h4 {
   font-weight: 500;
@@ -122,6 +133,7 @@
   text-align: center;
   font-family: 'Roboto', sans-serif !important;
 }
+
 .information--products div:nth-child(2),
 .information--products div:nth-child(3) {
   max-height: 385px;
@@ -129,12 +141,14 @@
   border-radius: 20px;
   overflow: hidden;
 }
+
 .information--products div:nth-child(2):hover,
 .information--products div:nth-child(3):hover {
   -webkit-box-shadow: 0px 0px 40px -11px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 40px -11px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 40px -11px rgba(0, 0, 0, 0.75);
 }
+
 .information--products div:nth-child(2) h5,
 .information--products div:nth-child(3) h5 {
   font-weight: 600;
@@ -144,6 +158,7 @@
   margin-top: 5px;
   margin-left: 30px;
 }
+
 .information--products div:nth-child(2) p,
 .information--products div:nth-child(3) p {
   font-weight: 300;
@@ -152,6 +167,7 @@
   margin-left: 30px;
   margin-bottom: 0;
 }
+
 .information--products div:nth-child(2) span,
 .information--products div:nth-child(3) span {
   font-weight: 500;
@@ -160,11 +176,13 @@
   display: block;
   margin-left: 30px;
 }
+
 .information--products div:nth-child(2) img,
 .information--products div:nth-child(3) img {
   width: 75%;
   object-position: -100px;
 }
+
 .button-all {
   margin: 0 auto;
   display: block;
@@ -180,11 +198,13 @@
   margin-top: 15px;
   transition: all 0.4s ease;
 }
+
 .button-all:hover {
   background-color: transparent;
   color: black;
   border: 2px solid black;
 }
+
 .collections {
   margin-bottom: 30px;
 }

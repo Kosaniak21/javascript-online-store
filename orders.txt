@@ -1,0 +1,4 @@
+{"clientName":"sdfasdfasd","clientEmail":"fasdfasdfasdadsfasdfaf@gmail.com","cart":{"{\"id\":\"2\",\"image\":\"diamant-blue.png\"}":1}}
+{"clientName":"Viktor","clientEmail":"fasdfasdfasdadsfasdfaf@gmail.com","cart":{"{\"id\":\"2\",\"image\":\"diamant-blue.png\"}":1}}
+{"clientName":"Viktor","clientEmail":"fasdfasdfasdadsfasdfaf@gmail.com","cart":{"{\"id\":\"2\",\"image\":\"diamant-blue.png\"}":1}}
+{"clientName":"sdfasdfasd","clientEmail":"fasdfasdfasdadsfasdfaf@gmail.com","cart":{"{\"id\":\"3\",\"image\":\"rise-h20-blue.png\"}":1}}

@@ -20,9 +20,9 @@ class Cart {
     let total = 0;
     let cartDomSting = `<div class="container">
                 <div class="row modal-titles">
-                    <div class="col-6 modal-product-title">Product</div>
-                    <div class="col-3 d-flex justify-content-end modal-quantity-title">Quantity</div>
-                    <div class="col-3 d-flex justify-content-end modal-price-title">Price</div>
+                    <div class="col-6 modal-product-title lng-modal-product">Products</div>
+                    <div class="col-3 d-flex justify-content-end modal-quantity-title lng-modal-quantity"></div>
+                    <div class="col-3 d-flex justify-content-end lng-modal-price"></div>
                 </div>`;
     for (const item in this.cart) {
       const { product, image } = await this.productService.getProductById(item);
@@ -32,10 +32,10 @@ class Cart {
       <div class="col-6 mb-3"><img class="cart-image" src="img/products/${image}" alt="${product.title}"> ${product.title}</div>
       <div class="col-3 d-flex justify-content-end align-items-center">
           <button data-item=${item} class="btn btn-sm plus">+</button>
-          ${quantity}
+         <span class="quantity">${quantity}</span>
           <button data-item=${item} class="btn btn-sm minus">-</button>
       </div>
-      <div class="col-3 d-flex justify-content-end align-items-center">${product.price}</div>
+      <div class="col-3 d-flex justify-content-end align-items-center cart-price lng-modal-price">${product.price}</div>
   </div>`;
     }
     total = total.toFixed(2);
@@ -54,6 +54,8 @@ class Cart {
     this.cartContainer
       .querySelectorAll('.minus')
       .forEach(el => el.addEventListener('click', ev => this.changeQuantity(ev, this.deleteProduct)));
+
+    changeLanguage();
   }
 
   changeQuantity(ev, operation) {
@@ -109,6 +111,9 @@ class Cart {
           clientName: document.querySelector('#client-name').value,
           clientEmail: document.querySelector('#client-email').value,
           cart: this.cart,
+          total: this.totalContainer.innerText,
+          date: dateForOrder(),
+          numberOrder: generateNumberOrder(),
         }),
       })
         .then(response => {
@@ -125,7 +130,7 @@ class Cart {
           this.updateBadge();
           this.renderCart();
           window.showAlert('Thank you! ' + responseText);
-          this.cartContainer.querySelector('.btn-close').click();
+          this.cartContainer.querySelector('.close-modal').click();
         })
         .catch(error => showAlert('There is an error: ' + error, false));
     } else {

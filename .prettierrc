@@ -6,5 +6,6 @@
   "arrowParens": "avoid",
   "htmlWhitespaceSensitivity": "strict",
   "tabWidth": 2,
-  "useTabs": false
+  "useTabs": false,
+  "endOfLine": "auto"
 }
