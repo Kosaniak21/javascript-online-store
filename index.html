@@ -103,7 +103,7 @@
           </ul>
           <div>
             <form class="search">
-              <input type="search" placeholder="Search product..." />
+              <input type="search" placeholder="Search product..." title="search" />
               <button>
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
@@ -531,7 +531,7 @@
             </div>
 
             <div class="input-container">
-              <input type="text" placeholder="EMAIL" />
+              <input type="text" placeholder="EMAIL" title="subscribe" />
               <button class="lng-subscribe-button">
                 SUBSCRIBE <?xml version="1.0" ?><svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
                   <rect fill="none" height="256" width="256" />
@@ -709,10 +709,24 @@
             <div class="container">
               <form class="form-contacts">
                 <div class="form-group row">
-                  <input placeholder="Your name" class="form-control col-12" type="text" id="client-name" required />
+                  <input
+                    placeholder="Your name"
+                    class="form-control col-12"
+                    type="text"
+                    id="client-name"
+                    required
+                    title="Enter your name"
+                  />
                 </div>
                 <div class="form-group row">
-                  <input placeholder="Your email" class="form-control col-12" type="email" id="client-email" required />
+                  <input
+                    placeholder="Your email"
+                    class="form-control col-12"
+                    type="email"
+                    id="client-email"
+                    required
+                    title="Enter a valid email"
+                  />
                 </div>
               </form>
             </div>

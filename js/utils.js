@@ -1,5 +1,6 @@
 function generateNumberOrder(length = 4) {
   const randomNumber = Math.floor(Math.random() * (Math.pow(10, length - 1) * 9)) + Math.pow(10, length - 1);
+
   return randomNumber + '#';
 }
 
