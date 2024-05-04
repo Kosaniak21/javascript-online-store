@@ -4,7 +4,7 @@
     "title": "Mottera",
     "image": {
       "1": {
-        "link": "mottera.png",
+        "link": "mottera-green.png",
         "color": "#3CBF8D"
       },
       "2": {
@@ -20,7 +20,7 @@
     "title": "Diamant",
     "image": {
       "1": {
-        "link": "diamant.png",
+        "link": "diamant-light.png",
         "color": "#6BC6E0"
       },
       "2": {
@@ -52,11 +52,11 @@
     "title": "Gallio",
     "image": {
       "1": {
-        "link": "bicycle-small-red.png",
+        "link": "galio-red.png",
         "color": "#FF0000"
       },
       "2": {
-        "link": "bicycle-small-yellow.png",
+        "link": "galio-yellow.png",
         "color": "#FFFF00"
       }
     },
@@ -101,10 +101,10 @@
     "image": {
       "1": {
         "link": "manrola-black.png",
-        "color": "#FD0329"
+        "color": "#000000"
       },
       "2": {
-        "link": "manrola.png",
+        "link": "manrola-red.png",
         "color": "#ff2b4b"
       }
     },
@@ -152,7 +152,7 @@
         "color": "#FE1A13"
       },
       "2": {
-        "link": "tdr.png",
+        "link": "tdr-black.png",
         "color": "black"
       }
     },
@@ -164,7 +164,7 @@
     "title": "Vortex",
     "image": {
       "1": {
-        "link": "vortex.png",
+        "link": "vortex-red.png",
         "color": "#EA4D1E"
       }
     },

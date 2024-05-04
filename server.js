@@ -12,8 +12,7 @@ const sgMail = require('@sendgrid/mail');
 require('dotenv').config();
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-async function sendEmail(data) {
-  console.log(data);
+function sendEmail(data) {
   return new Promise((resolve, reject) => {
     const msg = {
       to: data.clientEmail,
@@ -25,20 +24,25 @@ async function sendEmail(data) {
       text: 'Successful Order',
       html: ` <p>Dear ${data.clientName},</p>
       <p>Thank you for choosing Morbride! We're excited to confirm your recent order. Here are the details:</p>
-  
       <p><strong>Order Number:</strong> ${data.numberOrder}<br>
       <strong>Date:</strong>${data.date}<br></p>
-  
       <p><strong>Items Ordered:</strong><br>
-      ${Object.values(data.cart)
-        .map((item, index) => `${index + 1}. ID: ${item.id} - Quantity: ${item}`)
-        .join('<br>')}
-
+      ${Object.entries(data.cart)
+        .map((item, index) => {
+          let [cartItemKey, quantity] = item;
+          let formattedName = 'Unknown';
+          const cartItemObject = JSON.parse(cartItemKey);
+          const filename = cartItemObject.image;
+          if (filename) {
+            const nameWithoutExtension = filename.slice(0, -4);
+            formattedName = nameWithoutExtension.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+          }
+          return `${index + 1}. ID: ${formattedName} - Quantity: ${quantity}`;
+        })
+        .join('<br>')}</p>
       <p>Total: ${data.total}</p>
       <p>If you have any questions or concerns regarding your order, please feel free to contact us. We'll be happy to assist you.</p>
-  
       <p>Thank you once again for your purchase. We appreciate your business and look forward to serving you again soon!</p>
-  
       <p>Best regards,<br>
       Viktor Kosaniak</p>`,
     };

@@ -27,9 +27,11 @@ class Cart {
     for (const item in this.cart) {
       const { product, image } = await this.productService.getProductById(item);
       const quantity = this.cart[item];
+      const nameProduct = image.slice(0, -4);
+      const formattedName = nameProduct.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
       total += product.price * this.cart[item];
       cartDomSting += `<div class="row cart-buttons" data-id="${product.id}">
-      <div class="col-6 mb-3"><img class="cart-image" src="img/products/${image}" alt="${product.title}"> ${product.title}</div>
+      <div class="col-6 mb-3"><img class="cart-image" src="img/products/${image}" alt="${formattedName}"> ${formattedName}</div>
       <div class="col-3 d-flex justify-content-end align-items-center">
           <button data-item=${item} class="btn btn-sm plus">+</button>
          <span class="quantity">${quantity}</span>
