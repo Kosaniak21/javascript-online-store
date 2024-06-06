@@ -2,7 +2,7 @@
 
 Welcome to the JavaScript Online Store - Bicycle Shop! This online store specializes in selling bicycles of various types. Customers can browse through the collection, add items to their cart, mark items as favorites, and enjoy other main functionalities provided by the store.
 
-## LIVE DEMO - https://kosaniak21.github.io/javascript-online-store/
+## LIVE DEMO - 
 
 ## Features
 
